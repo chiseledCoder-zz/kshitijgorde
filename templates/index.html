@@ -162,82 +162,20 @@
 			<section class="grid-wrap">
 				<ul class="grid">
 				<li class="grid-sizer"></li><!-- for Masonry column width -->                    
-				<li class="wow fadeInUpBig" data-wow-duration="0.5s">
-					<figure>
-					<img src="images/portfolio/portfolio-1.jpg" alt="portfolio-01"/>
-					<figcaption>
-						<h3>Lorem ipsum</h3>
-						<p>Pariatur food truck street art consequat sustainable</p>
-					</figcaption>
-					</figure>
-				</li>
-				<li class="wow fadeInUpBig" data-wow-duration="1s">
-					<figure>
-					<img src="images/portfolio/portfolio-2.jpg" alt="portfolio-02"/>
-					<figcaption>
-						<h3>Morbi in sem quis</h3>
-						<p>Pariatur food truck street art consequat sustainable</p>
-					</figcaption>
-					</figure>
-				</li>
-				<li class="wow fadeInUpBig" data-wow-duration="1.5s">
-					<figure>
-					<img src="images/portfolio/portfolio-3.jpg" alt="portfolio-03"/>
-					<figcaption>
-						<h3>Pellentesque hab</h3>
-						<p>Pariatur food truck street art consequat sustainable</p>
-					</figcaption>
-					</figure>
-				</li>
-				<li class="wow fadeInUpBig" data-wow-duration="2s">
-					<figure>
-					<img src="images/portfolio/portfolio-4.jpg" alt="portfolio-04"/>
-					<figcaption class="last">
-						<h3>Lorem ipsum</h3>
-						<p>Pariatur food truck street art consequat sustainable</p>
-					</figcaption>
-					</figure>
-				</li>
-				<li class="wow fadeInUpBig" data-wow-duration="0.6s">
-					<figure>
-					<img src="images/portfolio/portfolio-5.jpg" alt="portfolio-05"/>
-					<figcaption>
-						<h3>Morbi in sem quis</h3>
-						<p>Pariatur food truck street art consequat sustainable</p>
-					</figcaption>
-					</figure>
-				</li>
-				<li class="wow fadeInUpBig" data-wow-duration="1.2s">
-					<figure>
-					<img src="images/portfolio/portfolio-6.jpg" alt="portfolio-06"/>
-					<figcaption>
-						<h3>Pellentesque hab</h3>
-						<p>Pariatur food truck street art consequat sustainable</p>
-					</figcaption>
-					</figure>
-				</li>
-				<li class="wow fadeInUpBig" data-wow-duration="1.8s">
-					<figure>
-					<img src="images/portfolio/portfolio-7.jpg" alt="portfolio-07"/>
-					<figcaption>
-						<h3>Kale chips lomo</h3>
-						<p>Pariatur food truck street art consequat sustainable</p>
-					</figcaption>
-					</figure>
-				</li>
-				<li class="wow fadeInUpBig" data-wow-duration="2.4s">
-					<figure>
-					<img src="images/portfolio/portfolio-8.jpg" alt="portfolio-08"/>
-					<figcaption class="last">
-						<h3>Morbi chips lomo</h3>
-						<p>Pariatur food truck street art consequat sustainable</p>
-					</figcaption>
-					</figure>
-				</li>
+				{% for object in project_objects %}
+					<li class="wow fadeInUpBig" data-wow-duration="0.5s">
+						<figure>
+						<img src="{{ object.featured_image.url }}" alt="{{ object.title }}"/>
+						<figcaption>
+							<h3>{{ object.title|title }}</h3>
+							<p>{{ object.description|safe|truncatewords:7 }}</p>
+						</figcaption>
+						</figure>
+					</li>
+				{% endfor %}
 				</ul>
 			</section> <!-- /grid-gallery -->
-
-			<section class="slideshow">
+				<section class="slideshow">
 				<ul>
 				<li>
 					<figure>
@@ -367,7 +305,6 @@
 				</nav>
 				<div class="info-keys icon">Navigate</div>
 			</section><!-- / slideshow -->
-
 			</div><!-- / grid-gallery -->
 		  
 		</section>
@@ -457,33 +394,7 @@
 				</footer>              
 			</article>
 
-			<article class="blog-post text-center">              
-				<header>
-					<p class="post-cat"><a href="javascript:void(0);">Design</a></p>
-					<h2 class="post-title"><a href="javascript:void(0);">Morbi in sem quis</a></h2>
-				</header>
-				<footer>
-					<time class="post-time" datetime="2014-08-04">August 4th, 2014</time>
-					<i class="post-icon icon_circle-slelected"></i>
-					<span class="post-author">John Doe</span>
-					<i class="post-icon icon_circle-slelected"></i>
-					<span class="post-comments">2 Comments</span>
-				</footer>              
-			</article>
-
-			<article class="blog-post blog-post-last text-center">              
-				<header>
-					<p class="post-cat"><a href="javascript:void(0);">UI</a></p>
-					<h2 class="post-title"><a href="javascript:void(0);">Aliquam tincidunt mauris eu risus</a></h2>
-				</header>
-				<footer>
-					<time class="post-time" datetime="2014-08-12">August 12th, 2014</time>
-					<i class="post-icon icon_circle-slelected"></i>
-					<span class="post-author">Mickey Blueyes</span>
-					<i class="post-icon icon_circle-slelected"></i>
-					<span class="post-comments">5 Comments</span>
-				</footer>              
-			</article>
+			{% for object in blog_post %}
 
 			</div>
 

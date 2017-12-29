@@ -380,22 +380,22 @@
 			</div>
 			</div>
 			<div class="row">
-			<article class="blog-post post-first text-center">              
-				<header>
-					<p class="post-cat"><a href="javascript:void(0);">Agency</a></p>
-					<h2 class="post-title"><a href="javascript:void(0);">Vestibulum auctor dapibus neque</a></h2>
-				</header>
-				<footer>
-					<time class="post-time" datetime="2014-08-01">August 1st, 2014</time>
-					<i class="post-icon icon_circle-slelected"></i>
-					<span class="post-author">John Doe</span>
-					<i class="post-icon icon_circle-slelected"></i>
-					<span class="post-comments">No Comments</span>
-				</footer>              
-			</article>
 
-			{% for object in blog_post %}
-
+			{% for object in recent_blog_post %}
+				<article class="blog-post post-first text-center">              
+					<header>
+						<p class="post-cat"><a href="javascript:void(0);">Agency</a></p>
+						<h2 class="post-title"><a href="javascript:void(0);">Vestibulum auctor dapibus neque</a></h2>
+					</header>
+					<footer>
+						<time class="post-time" datetime="2014-08-01">August 1st, 2014</time>
+						<i class="post-icon icon_circle-slelected"></i>
+						<span class="post-author">John Doe</span>
+						<i class="post-icon icon_circle-slelected"></i>
+						<span class="post-comments">No Comments</span>
+					</footer>              
+				</article>
+			{% endfor %}
 			</div>
 
 		</section>

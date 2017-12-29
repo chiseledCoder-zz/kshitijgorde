@@ -9,7 +9,7 @@ from blog.models import Post
 def home(request):
 	aboutme = AboutMe.objects.all()[:1]
 	project_list = Project.objects.filter(enable=True)
-	blog = Post.objects.active()[:5]
+	post_list = Post.objects.active()[:5]
 	template = "index.html"
 	context = {
 		"site_title": "Kshitij Gorde Website",

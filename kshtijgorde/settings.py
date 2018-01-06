@@ -104,14 +104,7 @@ try:
             'HOST': url.hostname,
             'PORT': url.port,
         })
-        if self.connection.open:
-            self.connection.stat()
-
-        try:
-            self.connection = MySQLdb.connect(host=url.hostname,port=url.port,db=url.path[1:],user=url.username,passwd= url.password)
-        except MySQLdb.OperationalError, e:
-            self.connection = None
-
+        
         if url.scheme == 'mysql':
             DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
 except Exception:

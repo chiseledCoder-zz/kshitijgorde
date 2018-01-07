@@ -2,7 +2,10 @@
 from __future__ import unicode_literals
 
 from django.db import models
-
+from django.core.urlresolvers import reverse
+from django.utils.text import slugify
+from ckeditor.fields import RichTextField
+from django.contrib.sitemaps import ping_google
 # Create your models here.
 
 class ProjectCategory(models.Model):
@@ -22,7 +25,7 @@ class ProjectCategory(models.Model):
 
 class Project(models.Model):
 	title = models.CharField(max_length=250)
-	description = models.TextField()
+	description = RichTextField()
 	category = models.ForeignKey('ProjectCategory', blank=True, null=True)
 	featured_image = models.ImageField(upload_to='projects/images/', default="projects/images/default.jpg")
 	associated_images = models.ManyToManyField('ProjectImage', blank=True)

@@ -39,7 +39,7 @@ class MyDistinguishingPoint(models.Model):
 	def __str__(self):
 		return self.title
 
-class Stats(models.Model):
+class Stat(models.Model):
 	title = models.CharField(max_length=250)
 	count = models.IntegerField()
 	enable = models.BooleanField(default=False)
@@ -53,7 +53,7 @@ class Stats(models.Model):
 		return self.title
 
 
-class Testimonials(models.Model):
+class Testimonial(models.Model):
 	given_by_name = models.CharField(max_length=250)
 	testimony = models.TextField()
 	designation = RichTextField(max_length=250)

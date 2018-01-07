@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.db import models
 from django.core.urlresolvers import reverse
 from django.utils.text import slugify
+from ckeditor.fields import RichTextField
 from django.contrib.sitemaps import ping_google
 # Create your models here.
 
@@ -41,7 +42,7 @@ class PostManager(models.Manager):
 
 class Post(models.Model):
 	title = models.CharField(max_length=255)
-	description = models.TextField()
+	description = RichTextField()
 	meta_description = models.TextField(null="", blank=True)
 	category = models.ForeignKey('PostCategory', blank=True, null=True)
 	featured_image = models.ImageField(upload_to='products/images/', null=True, blank=True)

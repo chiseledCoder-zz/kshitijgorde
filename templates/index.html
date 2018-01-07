@@ -28,101 +28,37 @@
 			<div id="about-listing">
 			<div class="container">
 				<div class="row">
-				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 listing-wrapper wow fadeInLeft animated" data-wow-delay="0.5s">
-					<div class="circle-point"></div>
-					<div class="post-list post-thinkers">
-					<h2 class="single-title"><i class="icon_lightbulb_alt"></i> THINKERS.</h2>
-					<p>Pecorino rubber cheese cheese triangles. Cheesy grin halloumi port-salut cheesy feet the big cheese cauliflower cheese smelly cheese smelly cheese.</p>
-					<p>Pecorino rubber cheese cheese triangles.</p>
-					<ul>
-						<li>Pecorino</li>
-						<li>Cheese</li>
-						<li>Halloumi</li>
-						<li>Cauliflower</li>                  
-					</ul>
-					</div>
-				</div>
-				 
-				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 listing-wrapper wow fadeInLeft animated" data-wow-delay="1s">
-					<div class="circle-point"></div>
-					<div class="post-list post-dremers">
-					<h2 class="single-title"><i class="icon_chat_alt"></i> DREAMERS.</h2>
-					<p>Pecorino rubber cheese cheese triangles. Cheesy grin halloumi port-salut cheesy feet the big cheese cauliflower cheese smelly cheese smelly cheese.</p>
-					<p>Pecorino rubber cheese cheese triangles.</p>
-					<ul>
-						<li>Pecorino</li>
-						<li>Cheese</li>
-						<li>Halloumi</li>
-						<li>Cauliflower</li>                  
-					</ul>
-					</div>
-				</div>
-				 
-				<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 listing-wrapper-last wow fadeInLeft animated" data-wow-delay="1.5s">
-					<div class="post-list post-researchers">
-					<h2 class="single-title"><i class="icon_piechart"></i> RESEARCHERS.</h2>
-					<p>Pecorino rubber cheese cheese triangles. Cheesy grin halloumi port-salut cheesy feet the big cheese cauliflower cheese smelly cheese smelly cheese.</p>
-					<p>Pecorino rubber cheese cheese triangles.</p>
-					<ul>
-						<li>Pecorino</li>
-						<li>Cheese</li>
-						<li>Halloumi</li>
-						<li>Cauliflower</li>                  
-					</ul>
-					</div>
-				</div>
-
+					{% for item in distinguishing_points_objects %}
+						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 listing-wrapper wow fadeInLeft animated" data-wow-delay="0.5s">
+							<div class="circle-point"></div>
+							<div class="post-list post-thinkers">
+							<h2 class="single-title"><i class="icon_lightbulb_alt"></i> THINKERS.</h2>
+							<p>Pecorino rubber cheese cheese triangles. Cheesy grin halloumi port-salut cheesy feet the big cheese cauliflower cheese smelly cheese smelly cheese.</p>
+							<p>Pecorino rubber cheese cheese triangles.</p>
+							<ul>
+								<li>Pecorino</li>
+								<li>Cheese</li>
+								<li>Halloumi</li>
+								<li>Cauliflower</li>                  
+							</ul>
+							</div>
+						</div>
+					{% endfor %}
 				</div>
 			</div>
 			</div>
 
 		</section>
 		<!-- /about -->
-
-		<!-- intagram -->
-		<section id="intagram-feed" class="dark-bg-odd">
-
-			<div class="container">
-			<div class="row">
-				<div class="section-info col-md-10 col-md-offset-1 text-center wow fadeInDown animated">
-				<h3>Delicious Grams</h3>
-				<ul class="hr">
-					<li class="hr-line"><span></span></li>
-					<li class="hr-icon"><i class="social_instagram_square"></i></li>
-					<li class="hr-line"><span></span></li>
-				</ul>
-				<p>We Ask Question, listen, learn, #workhard, love #food and #innovate.</p>
-				</div>
-			</div>
-			</div>
-
-			<div class="container-fuid">
-			<div class="row">
-				<div id="instafeed"></div>
-			</div>
-			</div>
-		</section>
-		<!-- /intagram -->
-
 		<!-- stats -->
 		<section id="stats" class="container-fluid">
 		<div class="row">
-			<div class="col-lg-3 col-md-3 col-sm-3 stats-project">        
-			<h2 class="counter text-light">530</h2>
-			<p>Project Finished</p>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-3 stats-clients">
-			<h2 class="counter text-light">120</h2>
-			<p>Client Worked</p>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-3 stats-tweets">
-			<h2 class="counter text-light">6850</h2>
-			<p>Lines of code</p>
-			</div>
-			<div class="col-lg-3 col-md-3 col-sm-3 stats-coffee">
-			<h2 class="counter text-light">800</h2>
-			<p>Coffee Cups</p>
-			</div>
+			{% for item in stat_objects %}
+				<div class="col-lg-3 col-md-3 col-sm-3 stats-project">        
+					<h2 class="counter text-light">530</h2>
+					<p>Project Finished</p>
+				</div>
+			{% endfor %}
 		</div>
 		</section>
 		<!-- /stats -->

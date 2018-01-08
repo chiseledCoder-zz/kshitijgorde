@@ -17,7 +17,7 @@
 					<li class="hr-icon"><i class="icon_heart_alt"></i></li>
 					<li class="hr-line"><span></span></li>
 				</ul>
-				{% for item in aboutme %}
+				{% for item in aboutme_objects %}
 					<p>{{ item.description }}</p>	
 				{% endfor %}
 				
@@ -55,8 +55,8 @@
 		<div class="row">
 			{% for item in stat_objects %}
 				<div class="col-lg-3 col-md-3 col-sm-3 stats-project">        
-					<h2 class="counter text-light">530</h2>
-					<p>Project Finished</p>
+					<h2 class="counter text-light">{{ item.count }}</h2>
+					<p>{{ item.title }}</p>
 				</div>
 			{% endfor %}
 		</div>
@@ -266,30 +266,16 @@
 						<li class="hr-line"><span></span></li>
 						</ul>
 						<div id="testimonial-slider" class="testimonial-carousel testimonial-theme">
-						<div class="item">
-							<div class="testimonial-carousel-caption">         
-							<blockquote class="testimonial-text">Fantastic product, my sites all run super fast and the support is excellent!<br>The website you designed helped a lot! </blockquote>
-							<img class="client-img wow flipInY" src="images/team/team-1.jpg" alt="client-1" />
-							<p class="client-name text-light">John Doe</p>
-							<p class="client-designation text-light">CEO, Apple Inc.</p>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimonial-carousel-caption">          
-							<blockquote class="testimonial-text">Fantastic product, my sites all run super fast and the support is excellent!<br>The website you designed helped a lot! </blockquote>
-							<img class="client-img wow flipInY" src="images/team/team-2.jpg" alt="client-2" />
-							<p class="client-name text-light">Jane Awesome</p>
-							<p class="client-designation text-light">CEO, BB Inc.</p>
-							</div>
-						</div>
-						<div class="item">
-							<div class="testimonial-carousel-caption">          
-							<blockquote class="testimonial-text">Fantastic product, my sites all run super fast and the support is excellent!<br>The website you designed helped a lot! </blockquote>
-							<img class="client-img wow flipInY" data-wow-duration="2s" src="images/team/team-3.jpg" alt="client-4" />
-							<p class="client-name text-light">Mickey Blueyes</p>
-							<p class="client-designation text-light">CEO, ABC Inc.</p>
-							</div>
-						</div>       
+							<div class="item">
+								{% for item in testimonial_objects %}
+									<div class="testimonial-carousel-caption">         
+										<blockquote class="testimonial-text">{{ item.testimony }}</blockquote>
+										<img class="client-img wow flipInY" src="images/team/team-1.jpg" alt="client-1" />
+										<p class="client-name text-light">{{ item.given_by_name }}</p>
+										<p class="client-designation text-light">{{ item.designation }}</p>
+									</div>	
+								{% endfor %}
+							</div>							       
 						</div>
 					</div>
 				</div>

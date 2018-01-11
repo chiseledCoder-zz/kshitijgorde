@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>AboutMe | Personal Portfolio Template</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="img/favicon.png" type="image/png">
+{% block extracss %} {% include "all_css.min.html" %} {% endblock %}
+<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+<div class="about-me-preloder">
+<div class="spinner"></div>
+</div>
+{% block content %} {% endblock %} {% block extrajs %} {% include "all_js.min.html" %} {% endblock %}
+</body>
+</html>

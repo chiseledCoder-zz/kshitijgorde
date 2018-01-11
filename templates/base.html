@@ -1,183 +1,33 @@
-{% load staticfiles %}
 <!DOCTYPE html>
-<!--[if lt IE 7]>    	<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>       	<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>       	<html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-	<head>                
-		<meta charset="utf-8">        
-		<title>Kshitij Gorde</title>
-		<meta name="description" content="">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-
-		<meta name="description" content="Add your business website description here">
-		<meta name="keywords" content="Add your, business, website, keywords, here">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-		<!-- favicon -->  
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-		<link rel="icon" href="favicon.ico" type="image/x-icon">
-
-		<!-- google fonts -->
-		<link href='https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900%7CMerriweather:400,400italic,300,300italic,700,700italic' rel='stylesheet' type='text/css'>
-		{% block extracss %}
-			{% include "all_css.html" %}
-		{% endblock %}
-		<!--[if lt IE 9]>
-			<script type="text/javascript" src="js/vendor/html5-3.6-respond-1.1.0.min.js"></script>
-		<![endif]-->
-	</head>    
-	<body>
-
-	<!-- preloader -->
-	<div id="pre-loader">
-	<div class="pre-loader-container">
-		<h2 class="section-title text-center preload-logo wow bounceIn">
-			<span class="section-title-border">KSHITIJ GORDE</span>
-		</h2>
-		<div class="loader wow"></div>
-	</div>
-	</div>
-
-	<div id="wrapper" class="dark-image">
-
-	<!-- logo -->
-	<div class="logo-wrapper">
-		<h1 class="logo"><img src="{% static 'images/ashoka-logo.png' %}" alt="ashoka a responsive minimal multipurpose theme"/>KSHITIJ GORDE</h1>
-	</div>
-	<!-- /logo -->
-
-	<!-- navigatin icon -->
-	<div class="navmenu-open">
-		<a href="javascript:void(0);" id="trigger-navbar">
-		<span class="icon_menu"></span>
-		</a>        
-	</div>
-	<!-- / navigatin icon -->
-	<!-- home - video presenation -->
-	<section id="home" class="video presenation">
-	  
-		<div class="overly-mask"></div>        
-		<div id="bg-dark-image" class="home-background"></div>
-	  
-		<div class="home-text container">
-
-			<h3>We are</h3>
-			<div id="home-text-slider" class="home-carousel home-theme">
-				<div class="item">
-					<div class="home-carousel-caption">         
-					<h2>Ashoka</h2>
-					<hr>
-					<p>An Award Winning Agency</p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="home-carousel-caption">
-					<h2>Thinkers</h2>
-					<hr>
-					<p>A Digital Creative Agency</p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="home-carousel-caption">
-					<h2>Dreamers</h2>
-					<hr>
-					<p>An Innovative Digital Agency</p>
-					</div>
-				</div>
-				<div class="item">
-					<div class="home-carousel-caption">
-					<h2>Artists</h2>
-					<hr>
-					<p>We Are Creative Artist</p>
-					</div>
-				</div>
-			</div>
-		 </div>         
-	  
-		<div class="scroll">
-			<span class="scroll-down"></span>
-			<span class="scroll-text">Scroll</span>
-		</div>
-	</section>
-	<!-- /home -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>AboutMe | Personal Portfolio Template</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel=icon href="img/favicon.png" type="image/png">
+	<!-- Place favicon.ico in the root directory -->
 
 	
-	{% block content %}
-
+    {% block extracss %}
+		{% include "all_css.min.html" %}
 	{% endblock %}
-	<!-- /container-fluid -->
-	<!-- menu items -->
-	<section id="navbar" class="navbar navbar-hugeinc">      
-		<header>        
-		<a href="javascript:void(0);" class="navbar-close">
-		<span class="icon_close"></span></a>   
-		
-		</header>
-		<nav>
-		<ul>          
-			<li>
-			<a data-scroll href="#home">
-				<span class="primary">Home</span>
-				<span class="secondary">We are Ashoka</span>
-				<div class="heading-sep"></div>
-			</a>
-			</li>          
-			<li>
-			<a data-scroll href="#about">
-				<span class="primary">About</span>
-				<span class="secondary">Get to know us</span>
-				<div class="heading-sep"></div>
-			</a>
-			</li>
-			<li>
-			<a data-scroll href="#portfolio">
-				<span class="primary">Portfolio</span>
-				<span class="secondary">See the goods</span>
-				<div class="heading-sep"></div>
-			</a>
-			</li>
-			<li>
-			<a data-scroll href="#testimonial">
-				<span class="primary">Testimonial</span> 
-				<span class="secondary">Lorem Ipsum</span>
-				<div class="heading-sep"></div>
-			</a>
-			</li>
-			<li>
-			<a data-scroll href="#blog">
-				<span class="primary">Blog</span>              
-				<span class="secondary">Learn how we do</span>
-				<div class="heading-sep"></div>
-			</a>
-			</li>
-			<li>
-			<a data-scroll href="#contact">
-				<span class="primary">Contact</span>
-				<span class="secondary">Get in to</span>              
-			</a>
-			</li>
-		</ul>
-		</nav>
-
-		<!-- footer -->      
-		<footer>
-		<div class="nav-footer">
-			<ul class="nav-footer-social-icons">
-			<li><a target="_blank" data-scroll href="#"><span class="social_twitter"></span></a></li>
-			<li><a target="_blank" data-scroll href="#"><span class="social_facebook"></span></a></li>
-			<li><a target="_blank" data-scroll href="#"><span class="social_googleplus"></span></a></li>
-			<li><a target="_blank" data-scroll href="#"><span class="social_dribbble"></span></a></li>
-			<li><a target="_blank" data-scroll href="#"><span class="social_linkedin"></span></a></li>
-			</ul>
-			<p class="nav-footer-copy">&copy; 2017 / Kshitij Gorde</p>
-		</div>
-		</footer>
-		<!-- / footer -->
-	</section>
-	<!-- / menu items -->
+	<!-- modernizr js -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+	<!-- preloder Start -->
+	<div class="about-me-preloder">
+		<div class="spinner"></div>
 	</div>
-	<!-- /wrapper -->
-		{% include "all_js.html" %}
-	</body>
+	<!-- preloder End -->
+	{% block content %}
+	{% endblock %}
+
+	
+	{% block extrajs %}
+		{% include "all_js.min.html" %}
+	{% endblock %}
+</body>
 </html>

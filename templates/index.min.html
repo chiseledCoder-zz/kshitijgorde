@@ -1,0 +1,35 @@
+{% extends 'base.min.html' %} {% block content %}
+<section class="hero-slider-area hero-slide-bg" id="home">
+{% include 'slider_section.min.html' %}
+</section>
+<div class="header-navbar-area">
+{% include 'navbar.min.html' %}
+</div>
+<div class="mobile-mean-menu-area hidden-lg hidden-md hidden-sm">
+{% include 'mobile_navbar.min.html' %}
+</div>
+<section class="about-me-area ptb-90" id="about">
+{% include 'aboutme_section.min.html' %}
+</section>
+<section class="all-skill-area ptb-90" id="skill">
+{% include 'skills_section.min.html' %}
+</section>
+<section class="education-area ptb-90" id="education">
+{% include 'education_section.min.html' %}
+</section>
+<section class="experience-area ptb-90" id="experience">
+{% include 'experience_section.min.html' %}
+</section>
+<section class="portfolio-area ptb-90" id="portfolio">
+{% include 'portfolio_section.min.html' %}
+</section>
+<section class="testimonial-area ptb-90" id="testimonial">
+{% include 'testimonial_section.min.html' %}
+</section>
+<section class="my-blog-area ptb-90" id="blog">
+{% include 'recent_blog_section.min.html' %}
+</section>
+<section class="contact-area p-top-90" id="contact">
+{% include 'footer.html' %}
+</section>
+{% endblock %}

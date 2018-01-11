@@ -1,435 +1,58 @@
-{% extends "base.html" %}
+{% extends 'base.min.html' %}
 {% block content %}
-<!-- Main Wrapper -->
-	<div id="main-wrapper">
-		<!-- about -->
-		<section id="about" class="section">
-			<div class="container">
-			<div class="row">
-				<h2 class="section-title text-center">
-				<span class="section-title-border wow pulse" data-wow-duration="1s" data-wow-delay="1s">ABOUT</span>
-				</h2>
-				<div class="section-info col-md-10 col-md-offset-1 text-center wow fadeInDown">
-				<h3>Because we <strong>love</strong> what we do</h3>
-
-				<ul class="hr">
-					<li class="hr-line"><span></span></li>
-					<li class="hr-icon"><i class="icon_heart_alt"></i></li>
-					<li class="hr-line"><span></span></li>
-				</ul>
-				{% for item in aboutme_objects %}
-					<p>{{ item.description }}</p>	
-				{% endfor %}
-				
-				</div>
-			</div>
-			</div>
-			<!-- about-listing -->
-			<div id="about-listing">
-			<div class="container">
-				<div class="row">
-					{% for item in distinguishing_points_objects %}
-						<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 listing-wrapper wow fadeInLeft animated" data-wow-delay="0.5s">
-							<div class="circle-point"></div>
-							<div class="post-list post-thinkers">
-							<h2 class="single-title"><i class="icon_lightbulb_alt"></i> THINKERS.</h2>
-							<p>Pecorino rubber cheese cheese triangles. Cheesy grin halloumi port-salut cheesy feet the big cheese cauliflower cheese smelly cheese smelly cheese.</p>
-							<p>Pecorino rubber cheese cheese triangles.</p>
-							<ul>
-								<li>Pecorino</li>
-								<li>Cheese</li>
-								<li>Halloumi</li>
-								<li>Cauliflower</li>                  
-							</ul>
-							</div>
-						</div>
-					{% endfor %}
-				</div>
-			</div>
-			</div>
-
-		</section>
-		<!-- /about -->
-		<!-- stats -->
-		<section id="stats" class="container-fluid">
-		<div class="row">
-			{% for item in stat_objects %}
-				<div class="col-lg-3 col-md-3 col-sm-3 stats-project">        
-					<h2 class="counter text-light">{{ item.count }}</h2>
-					<p>{{ item.title }}</p>
-				</div>
-			{% endfor %}
-		</div>
-		</section>
-		<!-- /stats -->
-		
-		
-		<!-- request pro -->
-		<section id="request-pro">
-			<div class="container-fuid">
-			<div class="row text-center">
-				<h2 class="request-text">Unsure where to <span>start</span>?</h2>
-				<a data-scroll="" href="#contact" class="btn btn-white btn-lg transperant-btn">GET US HELP</a>              
-			</div>
-			</div>
-		</section>
-		<!-- / request pro -->
-
-		<!-- portfolio -->        
-		<section id="portfolio" class="section">
-			<div class="container">
-			<div class="row">
-				<h2 class="section-title text-center">
-				<span class="section-title-border wow pulse">Portfolio</span>
-				</h2>
-				<div class="section-info col-md-10 col-md-offset-1 text-center wow fadeInDown">              
-				<h3>We do what <strong>we love</strong> Our clients love what we do</h3>
-				<ul class="hr">
-					<li class="hr-line"><span></span></li>
-					<li class="hr-icon"><i class="icon_toolbox_alt"></i></li>
-					<li class="hr-line"><span></span></li>
-				</ul>
-				<p>As a creative studio we believe no client is too big nor too small to work with us to obtain good advantage.</p>
-				</div>  
-			</div>
-			</div>
-		  
-			<div id="grid-gallery" class="grid-gallery">
-			<section class="grid-wrap">
-				<ul class="grid">
-				<li class="grid-sizer"></li><!-- for Masonry column width -->                    
-				{% for object in project_objects %}
-					<li class="wow fadeInUpBig" data-wow-duration="0.5s">
-						<figure>
-						<img src="{{ object.featured_image.url }}" alt="{{ object.title }}"/>
-						<figcaption>
-							<h3>{{ object.title|title }}</h3>
-							<p>{{ object.description|safe|truncatewords:7 }}</p>
-						</figcaption>
-						</figure>
-					</li>
-				{% endfor %}
-				</ul>
-			</section> <!-- /grid-gallery -->
-				<section class="slideshow">
-				<ul>
-				<li>
-					<figure>
-					<figcaption>
-						<h3>Project 1: ABC Company</h3> 
-						<p>Chambray Schlitz pug YOLO, PBR Tumblr semiotics. Flexitarian YOLO ennui Blue Bottle, forage dreamcatcher chillwave put a bird.</p>
-					</figcaption>
-					<img src="images/portfolio/portfolio-1.jpg" alt="portfolio-1"/>                    
-					<h4>
-						<small><span class="icon_tags_alt"></span> HTML5, CSS3, WordPress</small>
-						<small> / <span class="icon_calendar"></span> 18-06-2014</small>
-						<small> / <span class="icon_building"></span> Client Name</small>
-						<a data-scroll="" href="#contact" class="btn btn-default pull-right">Visite Site</a>
-						</h4>
-					</figure>
-				</li>
-				<li>
-					<figure>
-					<figcaption>
-						<h3>Project 2: ABC Company</h3>
-						<p>Chambray Schlitz pug YOLO, PBR Tumblr semiotics. Flexitarian YOLO ennui Blue Bottle, forage dreamcatcher chillwave put a bird.</p>
-					</figcaption>
-					<img src="images/portfolio/portfolio-2.jpg" alt="portfolio-2"/>
-					<h4>
-						<small><span class="icon_tags_alt"></span> HTML5, CSS3, WordPress</small>
-						<small> / <span class="icon_calendar"></span> 18-06-2014</small>
-						<small> / <span class="icon_building"></span> Client Name</small>
-						<a data-scroll="" href="#contact" class="btn btn-default pull-right">Visite Site</a>
-					</h4>
-					</figure>
-				</li>
-				<li>
-					<figure>
-					<figcaption>
-						<h3>Project 3: ABC Company</h3>
-						<p>Chambray Schlitz pug YOLO, PBR Tumblr semiotics. Flexitarian YOLO ennui Blue Bottle, forage dreamcatcher chillwave put a bird.</p>
-					</figcaption>
-					<img src="images/portfolio/portfolio-3.jpg" alt="portfolio-3"/>
-					<h4>
-						<small><span class="icon_tags_alt"></span> HTML5, CSS3, WordPress</small>
-						<small> / <span class="icon_calendar"></span> 18-06-2014</small>
-						<small> / <span class="icon_building"></span> Client Name</small>
-						<a data-scroll="" href="#contact" class="btn btn-default pull-right">Visite Site</a>
-					</h4>
-					</figure>
-				</li>
-				<li>
-					<figure>
-					<figcaption>
-						<h3>Project 4: ABC Company</h3>
-						<p>Chambray Schlitz pug YOLO, PBR Tumblr semiotics. Flexitarian YOLO ennui Blue Bottle, forage dreamcatcher chillwave put a bird.</p>
-					</figcaption>
-					<img src="images/portfolio/portfolio-4.jpg" alt="portfolio-4"/>
-					<h4>
-						<small><span class="icon_tags_alt"></span> HTML5, CSS3, WordPress</small>
-						<small> / <span class="icon_calendar"></span> 18-06-2014</small>
-						<small> / <span class="icon_building"></span> Client Name</small>
-						<a data-scroll="" href="#contact" class="btn btn-default pull-right">Visite Site</a>
-					</h4>
-					</figure>
-				</li>
-				<li>
-					<figure>
-					<figcaption>
-						<h3>Project 5: ABC Company</h3>
-						<p>Chambray Schlitz pug YOLO, PBR Tumblr semiotics. Flexitarian YOLO ennui Blue Bottle, forage dreamcatcher chillwave put a bird.</p>
-					</figcaption>
-					<img src="images/portfolio/portfolio-5.jpg" alt="portfolio-5"/>
-					<h4>
-						<small><span class="icon_tags_alt"></span> HTML5, CSS3, WordPress</small>
-						<small> / <span class="icon_calendar"></span> 18-06-2014</small>
-						<small> / <span class="icon_building"></span> Client Name</small>
-						<a data-scroll="" href="#contact" class="btn btn-default pull-right">Visite Site</a>
-					</h4>
-					</figure>
-				</li>
-				<li>
-					<figure>
-					<figcaption>
-						<h3>Project 6: ABC Company</h3>
-						<p>Chambray Schlitz pug YOLO, PBR Tumblr semiotics. Flexitarian YOLO ennui Blue Bottle, forage dreamcatcher chillwave put a bird.</p>
-					</figcaption>
-					<img src="images/portfolio/portfolio-6.jpg" alt="portfolio-6"/>
-					<h4>
-						<small><span class="icon_tags_alt"></span> HTML5, CSS3, WordPress</small>
-						<small> / <span class="icon_calendar"></span> 18-06-2014</small>
-						<small> / <span class="icon_building"></span> Client Name</small>
-						<a data-scroll="" href="#contact" class="btn btn-default pull-right">Visite Site</a>
-					</h4>
-					</figure>
-				</li>
-				<li>
-					<figure>
-					<figcaption>
-						<h3>Project 7: ABC Company</h3>
-						<p>Chambray Schlitz pug YOLO, PBR Tumblr semiotics. Flexitarian YOLO ennui Blue Bottle, forage dreamcatcher chillwave put a bird.</p>
-					</figcaption>
-					<img src="images/portfolio/portfolio-7.jpg" alt="portfolio-7"/>
-					<h4>
-						<small><span class="icon_tags_alt"></span> HTML5, CSS3, WordPress</small>
-						<small> / <span class="icon_calendar"></span> 18-06-2014</small>
-						<small> / <span class="icon_building"></span> Client Name</small>
-						<a data-scroll="" href="#contact" class="btn btn-default pull-right">Visite Site</a>
-					</h4>
-					</figure>
-				</li>
-				<li>
-					<figure>
-					<figcaption>
-						<h3>Project 8: ABC Company</h3>
-						<p>Chambray Schlitz pug YOLO, PBR Tumblr semiotics. Flexitarian YOLO ennui Blue Bottle, forage dreamcatcher chillwave put a bird.</p>
-					</figcaption>
-					<img src="images/portfolio/portfolio-8.jpg" alt="portfolio-8"/>
-					<h4>
-						<small><span class="icon_tags_alt"></span> HTML5, CSS3, WordPress</small>
-						<small> / <span class="icon_calendar"></span> 18-06-2014</small>
-						<small> / <span class="icon_building"></span> Client Name</small>
-						<a data-scroll="" href="#contact" class="btn btn-default pull-right">Visite Site</a>
-					</h4>
-					</figure>
-				</li>                    
-				</ul>
-				<nav>
-				<span class="icon nav-prev "></span>
-				<span class="icon nav-next"></span>
-				<span class="icon nav-close"></span>
-				</nav>
-				<div class="info-keys icon">Navigate</div>
-			</section><!-- / slideshow -->
-			</div><!-- / grid-gallery -->
-		  
-		</section>
-		<!-- /portfolio -->
-
-		<!-- testimonial -->
-		<section id="testimonial">          
-			<div class="testimonial-wrapper" 
-			data-center="background-position: 50% 0px;" 
-			data-bottom-top="background-position: 50% 200px;" 
-			data-top-bottom="background-position: 50% -200px;" 
-			data-direction="vertical">
-				<div class="text-center relative-bg">
-				<div class="image-mask"></div>
-				<div class="container">
-					<div class="testimonial-info row">
-						<h2 class="section-title text-center text-light">
-						<span class="section-title-border wow pulse" data-wow-duration="1s" data-wow-delay="1s">Customers Stories</span>
-						</h2>
-						<ul class="hr">
-						<li class="hr-line"><span></span></li>
-						<li class="hr-icon"><i class="icon_quotations_alt2"></i></li>
-						<li class="hr-line"><span></span></li>
-						</ul>
-						<div id="testimonial-slider" class="testimonial-carousel testimonial-theme">
-							<div class="item">
-								{% for item in testimonial_objects %}
-									<div class="testimonial-carousel-caption">         
-										<blockquote class="testimonial-text">{{ item.testimony }}</blockquote>
-										<img class="client-img wow flipInY" src="images/team/team-1.jpg" alt="client-1" />
-										<p class="client-name text-light">{{ item.given_by_name }}</p>
-										<p class="client-designation text-light">{{ item.designation }}</p>
-									</div>	
-								{% endfor %}
-							</div>							       
-						</div>
-					</div>
-				</div>
-			</div>
-			</div>
-		</section>
-		<!-- /testimonial -->
-
-
-		<!-- blog-->
-		<section id="blog" class="row section dark-bg-odd">
-			<div class="row">
-			<h2 class="section-title text-center">
-				<span class="section-title-border wow pulse" data-wow-duration="1s" data-wow-delay="1s">Our Blog</span>
-			</h2>
-			<div class="section-info col-md-10 col-md-offset-1 text-center wow fadeInDown">
-				<h3>Get the latest from <strong>US</strong>.</h3>
-				<ul class="hr">
-					<li class="hr-line"><span></span></li>
-					<li class="hr-icon"><i class="icon_pencil-edit_alt"></i></li>
-					<li class="hr-line"><span></span></li>
-				</ul>
-				<p>To take a trivial example, which of us ever undertakes laborious.</p>
-			</div>
-			</div>
-			<div class="row">
-
-			{% for object in recent_blog_post %}
-				<article class="blog-post post-first text-center">              
-					<header>
-						<p class="post-cat"><a href="javascript:void(0);">Agency</a></p>
-						<h2 class="post-title"><a href="javascript:void(0);">Vestibulum auctor dapibus neque</a></h2>
-					</header>
-					<footer>
-						<time class="post-time" datetime="2014-08-01">August 1st, 2014</time>
-						<i class="post-icon icon_circle-slelected"></i>
-						<span class="post-author">John Doe</span>
-						<i class="post-icon icon_circle-slelected"></i>
-						<span class="post-comments">No Comments</span>
-					</footer>              
-				</article>
-			{% endfor %}
-			</div>
-
-		</section>
-		<!-- /blog-->
-
-		<!-- address -->
-		<section id="address" class="dark-bg-odd">
-			<div class="container-fuid">                              
-			<div class="row text-center">
-				<h2 class="lts-talk wow pulse" data-wow-duration="1s" data-wow-delay="1s">Let's talk</h2>
-				<h2 class="contact-no text-light">+21 27 987 4565</h2>
-				<h3 class="email-add text-light">
-				<a href="mailto:hello@domain.com" class="mailto">hello@domain.com</a>
-				</h3>
-				<p class="full-address">18 McLuice Road, Vellyon Hills, New York, NY 10010</p>
-			</div>
-			</div>
-		</section>
-		<!-- /address -->
-
-		<!-- contact -->
-		<section id="contact" class="row section">
-			<div id="container">
-			<div class="row">
-				<h2 class="section-title text-center">
-				<span class="section-title-border wow pulse" data-wow-duration="1s" data-wow-delay="1s">Get In Touch</span>
-				</h2>
-				<div class="section-info col-md-10 col-md-offset-1 text-center wow fadeInDown">
-					<h3>We would love to hear from<strong> you.</strong></h3>
-					<ul class="hr">
-					<li class="hr-line"><span></span></li>
-					<li class="hr-icon"><i class="icon_mail_alt"></i></li>
-					<li class="hr-line"><span></span></li>
-					</ul>
-					<p>We welcome your inquiries at the email address below.We will get in touch with you soon.</p>
-				</div>            
-			</div>
-
-			<div class="row">            
-				<fieldset id="contactform" class="wow bounce" data-wow-duration="2s" data-wow-delay="0.5s">                
-				<div id="form_result"></div>
-				<div class="row">
-					<div class="col-md-6 col-md-offset-3">
-					<input name="name" type="text" id="name" class="form-control" placeholder="Full Name">
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-3 col-md-offset-3">
-					<input name="email" type="text" id="email" class="form-control" value="" placeholder="Valid email ID">
-					</div>                
-					<div class="col-md-3">
-					<input name="phone" type="text" id="phone" class="form-control" value="" placeholder="Contact No">
-					</div>
-				</div>
-				<div class="row">         
-					<div class="col-md-6 col-md-offset-3">
-					<textarea name="message" cols="40" rows="5" id="comments" class="form-control" placeholder="Your Message"></textarea>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 text-center">                    
-						<button type="submit" class="btn btn-white btn-lg" id="submit">SUBMIT</button>
-
-					</div>
-				</div>
-				</fieldset>
-				<!-- </form> -->
-			</div>
-			</div>
-		</section>
-		<!-- /contact -->
-
-		<!-- social -->
-		<section id="social" class="row">
-			<div class="soc-item facebook col-lg-3 col-md-3 col-sm-3">
-			<a data-scroll href="#">          
-				<span class="symbol social_facebook"></span>
-				<span class="count counter">1600</span>
-			</a>
-			</div>
-			<div class="soc-item twitter col-lg-3 col-md-3 col-sm-3">
-			<a data-scroll href="#">          
-				<span class="symbol social_twitter"></span>
-				<span class="count counter">2100</span>
-			</a>
-			</div>
-			<div class="soc-item google col-lg-3 col-md-3 col-sm-3">
-			<a data-scroll href="#">          
-				<span class="symbol social_googleplus"></span>
-				<span class="count counter">1200</span>
-			</a>
-			</div>
-			<div class="soc-item linkedin col-lg-3 col-md-3 col-sm-3">
-			<a data-scroll href="#">          
-				<span class="symbol social_linkedin"></span>
-				<span class="count counter">1500</span>
-			</a>
-			</div>
-		</section>
-		<!-- /social -->
-
-		<!-- footer -->
-		<footer id="footer">
-			<div class="container">
-			<div class="row">
-				<div class="move-up"><a data-scroll href="#home" class="arrow_carrot-2up"></a></div>
-				<div class="footer-logo"><h3>ASHOKA</h3></div>
-				<div class="footer-text">Copyright © 2014 <a href="javascript:void(0);">Ashoka Design</a>. Made with <span class="icon_heart_alt"></span></div>
-			</div>
-			</div>
-		</footer>
-		<!-- /footer -->
-	</div> 
-
+	<!-- hero-slider-area start -->
+	<section class="hero-slider-area hero-slide-bg" id="home">
+		{% include 'slider_section.min.html' %}
+	</section>
+	<!-- hero-slider-area end -->
+	<!-- header-navbar-area start -->
+	<div class="header-navbar-area">
+		{% include 'navbar.min.html' %}
+	</div>
+	<!-- header-navbar-area end -->
+	<!-- mobile-mean-menu-area start -->
+    <div class="mobile-mean-menu-area hidden-lg hidden-md hidden-sm">
+        {% include 'mobile_navbar.min.html' %}
+    </div>
+    <!-- mobile-meanmenu-end -->
+	<!-- about-me-area start -->
+	<section class="about-me-area ptb-90" id="about">
+		{% include 'aboutme_section.min.html' %}	
+	</section>
+	<!-- about-me-area end -->
+	<!-- all-skill-area start -->
+	<section class="all-skill-area ptb-90" id="skill">
+		{% include 'skills_section.min.html' %}
+	</section>
+	<!-- all-skill-area end -->
+	<!-- education-area start -->
+	<section class="education-area ptb-90" id="education">
+		{% include 'education_section.min.html' %}
+	</section>
+	<!-- education-area end -->
+	<!-- experience-area start -->
+	<section class="experience-area ptb-90" id="experience">
+		{% include 'experience_section.min.html' %}
+	</section>
+	<!-- experience-area end -->
+	<!-- portfolio-area start -->
+	<section class="portfolio-area ptb-90" id="portfolio">
+		{% include 'portfolio_section.min.html' %}
+	</section>
+	<!-- portfolio-area end -->
+	<!-- testimonial-area start -->
+	<section class="testimonial-area ptb-90" id="testimonial">
+		{% include 'testimonial_section.min.html' %}
+	</section>
+	<!-- testimonial-area end -->
+	<!-- my-blog-area start -->
+	<section class="my-blog-area ptb-90" id="blog">
+		{% include 'recent_blog_section.min.html' %}
+	</section>
+	<!-- my-blog-area end -->
+	<!-- contact-area start -->
+	<section class="contact-area p-top-90" id="contact">
+		{% include 'footer.html' %}
+	</section>
+	<!-- contact-area end -->
 {% endblock %}

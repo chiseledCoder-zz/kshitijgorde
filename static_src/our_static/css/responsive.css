@@ -1,0 +1,317 @@
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+.menu-navbar ul li a {padding: 20px 4px;}
+.progressbar.d-none, .progressbar.language.d-none {
+    display: none;
+}
+.progressbar {width: 30%;}
+.progressbar.language {width: 45%;}
+.blog-img img {min-height: inherit;}
+
+} /*end*/
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.logo {
+    text-align: center;
+}
+.menu-navbar ul li a {
+    padding: 20px 4px;
+}
+.l-shape:before {
+    width: 8%;
+    left: 40%;
+}
+.l-shape:after {
+    width: 8%;
+    right: 39%;
+}
+.about-me-info {
+    margin: 12px 0 30px -22px;
+}
+.about-me-area .social-links a {
+    display: inline-block;
+    margin: 20px 25px;
+    text-align: center;
+}
+.about-me-area .social-links {
+    float: initial;
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+    margin-top: 0;
+}
+.ptb-90 {
+    padding: 70px 0;
+}
+.professonal-skill.m-top-30 {
+    margin: 50px 0 0;
+}
+.blog-img img {
+    min-height: inherit;
+}
+.grade-wrap {
+    width: 15%;
+}
+.grade-wrap h5 {
+    top: 36%;
+}
+.eucation-info {
+    padding-left: 35px;
+}
+.line-shape:after {
+    width: 15%;
+}
+.portfolio-menu button {
+    padding: 4px 16px;
+}
+.contact-address-info {
+    margin: 68px 0 0;
+}
+.social-links {
+    float: left !important;
+    text-align: center;
+    margin: 20px auto 0;
+    width: 100%;
+}
+.copyright-text {
+    text-align: center;
+}
+}
+/* small mobile :320px. */
+@media (max-width: 767px) {
+.m-top-20 {margin-top: 20px;}
+.m-top-50 {margin-top: 50px;}
+.mt-30 {margin-top: 30px;}
+.hero-slide-info img, .testimonial-thumb img { width: 100px; height: 100px; border: 5px solid #ddd;}
+.logo {
+position: absolute;
+  z-index: 9999999;
+  margin: 5px 0; 
+}
+.mobile-mean-menu-area {
+	background-color: transparent;
+}
+.hero-text .cd-headline {
+    font-size: 12px;
+}
+.slider-text h1 {font-size: 28px;}
+.slider-text .cd-headline {
+    font-size: 16px;
+}
+.hero-text h1 {
+    font-size: 15px;
+    line-height: 20px;
+}
+.section-title h1 {font-size: 36px;}
+.hero-text p {
+    margin: 0;
+    font-size: 12px;
+}
+.ptb-90 {padding: 50px 0;}
+.section-title {
+    margin-bottom: 35px;
+}
+.social-links {
+    display: none;
+}
+.about-me-info {
+    font-size: 14px;
+    margin: 0;
+}
+.about-me-info h2 {
+    font-size: 34px;
+    margin: 0 0 10px;
+}
+.about-me {
+    padding-left: 10px;
+    margin-top: 21px;
+    max-height: 264px;
+}
+.about-personal-info {
+    padding: 10px;
+    max-height: inherit;
+}
+.about-personal-info li {width: 80%;}
+.professonal-skill h3, .addotional-skills h3, .language-skills h3 {
+    margin: 0 0 30px;
+    font-size: 20px;
+    text-align: center;
+}
+.professonal-skill span {
+    margin: 2px -60px;
+}
+.progressbar.d-none {
+    display: none;
+}
+.progressbar, .progressbar.language {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.progressbar:last-child, .progressbar.language {margin-bottom: 0;}
+.resume-print .resume-btn {margin-top: 20px;}
+.l-shape:before {
+    width: 20%;
+    left: 25%;
+}
+.l-shape:after {
+    width: 20%;
+    right: 21%;
+}
+.section-divide-line:before {
+    display: none;
+}
+.info-line-shape.top-20:before {
+    display: none;
+}
+.single-education-item {
+    margin-right: 0;
+}
+.rounded-shape {
+    display: none;
+}
+.eucation-info {
+    padding-left: 0;
+}
+.grade-wrap {display: none;}
+.experience-details .panel-default {
+    margin-right: 0;
+}
+.edu-ses-item {
+    margin-left: 0;
+    margin-top: 30px;
+}
+.line-shape:after {
+    display: none;
+}
+.left .line-shape { float: none; }
+.left .edu-ses-item {
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-right: 0;
+}
+.left .single-education-item {
+    margin-left: 0;
+    width: 100%;
+}
+.experience-area .row, .education-area .row, .my-blog-area .row {margin-top: 0px;}
+.experience-area .row, .education-area .row, .my-blog-area .row {
+    margin-bottom: 30px;
+}
+.info-line-shape:before {
+    display: none;
+}
+.info-line-shape:before {
+    display: none;
+}
+.experience-time h4 {
+    margin-left: 0;
+    margin-top: 30px; 
+}
+.left .experience-details .panel-default {
+    margin-left: 0;
+}
+.left .experience-time h4 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-right: 0;
+}
+.experience-details .panel-heading a h3:after {
+    right: 9px;
+    top: 10px;
+}
+.experience-details-2 {
+    margin-right: 0;
+}
+.left .experience-details-2 {
+    margin-left: 0px;
+}
+.portfolio-menu button {
+    display: block;
+    text-align: center;
+    margin: 0 auto 19px;
+}
+.blog-content {
+    margin-left: 0;
+    margin-top: 30px;
+}
+.blog-img img {min-height: inherit;}
+.blog-img {
+    margin-right: 0;
+}
+.left .blog-content {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+}
+.left .blog-img {
+    margin-left: 0;
+}
+.footer-copyright-area {
+    text-align: center;
+}
+
+} /*end*/
+ 
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.hero-text .cd-headline {
+    font-size: 20px;
+}
+.hero-text h1 {
+    font-size: 20px;
+}
+.slider-text h1 {font-size: 40px;}
+.slider-text .cd-headline {
+    font-size: 24px;
+}
+#sticker-mobile{
+    height: 45px;
+}
+.about-me {
+    padding: 20px;
+    margin-top: 0px;
+}
+.about-personal-info {
+    padding: 20px;
+    margin-top: 20px;
+}
+.single-portfolio-item {
+    width: 60%;
+    margin: 0 auto 30px;
+}
+.blog-img, .blog-content, .left .blog-content, .left .blog-img {width: 60%; margin: 0 auto}
+.blog-img, .blog-content, .left-blog-img, .left .blog-content {margin: 0 auto 30px;}
+.blog-content:last-child {margin: 0 auto 0;}
+.left .blog-img {margin: 30px auto 0;}
+.about-personal-info li {
+    width: 100%;
+}
+.progressbar, .progressbar.language {
+    width: 32.5%;
+}
+.resume-print .resume-btn {
+    margin-top: 40px;
+}
+.l-shape:before {
+    width: 10%;
+    left: 38%;
+}
+.l-shape:after {
+    width: 10%;
+    right: 36%;
+}
+.progressbar.language.d-none {display: inline-block;}
+.left .line-shape { float: right; }
+.left .experience-time.line-shape {float: none; text-align: right;}
+.qr-code {
+    float: left;
+}
+.contact-address-info {
+    display: inline-block;
+}
+.qr-code, .contact-address-info {
+    margin: 30px 0 0;
+}
+
+} /*end*/

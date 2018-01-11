@@ -244,5 +244,4 @@ EMAIL_HOST_USER = "contact@nikhilshirsath.in"
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD','')
 EMAIL_PORT = 80
 
-
 CORS_ORIGIN_ALLOW_ALL = True

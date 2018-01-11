@@ -8,7 +8,7 @@ class MyDistinguishingPointAdmin(admin.ModelAdmin):
 	list_display = ("title", "enable")
 
 class StatAdmin(admin.ModelAdmin):
-	list_display = ("title", "count", "enable")
+	list_display = ("title", "count","category", "enable")
 
 class TestimonialAdmin(admin.ModelAdmin):
 	list_display = ("given_by_name", "designation", "enable")

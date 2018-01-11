@@ -38,7 +38,9 @@
 						<!-- about-me start -->
 						<div class="about-me">
 							<h4>About Me</h4>
-							<p>Hello! I’m Smith. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum ullamcorper sem, at placerat dolor volutpat ac. Duis nulla enim, condimentum nec ultricies.</p>
+							{% for item in aboutme_objects %}
+								{{ item.description|safe }}
+							{% endfor %}
 							<a href="#" class="resume-btn">download resume</a>
 						</div>
 						<!-- about-me end -->
@@ -47,14 +49,15 @@
 						<!-- about-personal-info start -->
 						<div class="about-personal-info">
 							<ul>
-								<li><strong>Full Name :</strong>Stevin Smith</li>
-								<li><strong>Age :</strong>26</li>
-								<li><strong>Phone :</strong>+89824111</li>
-								<li><strong>Address :</strong>Berlin, Germany</li>
-								<li><strong>Email :</strong>smith@tech.com</li>
-								<li><strong>Skype :</strong>smith00-3</li>
-								<li><strong>Job :</strong>Frontend Developer</li>
-								<li><strong>Freelancer :</strong>available</li>
+								{% for item in aboutme_objects %}
+									<li><strong>Full Name :</strong>{{ item.full_name }} </li>
+									<li><strong>Age :</strong>{{ item.age }}</li>
+									<li><strong>Phone :</strong>{{ item.phone }}</li>
+									<li><strong>Address :</strong>{{ item.address }}</li>
+									<li><strong>Email :</strong>{{ item.email }}</li>
+									<li><strong>Skype :</strong>{{ item.skype_id }}</li>
+									<li><strong>Job :</strong>{{ item.job_position }}</li>	
+								{% endfor %}
 							</ul>
 						</div>
 						<!-- about-personal-info end -->

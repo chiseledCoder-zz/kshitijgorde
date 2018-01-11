@@ -17,12 +17,13 @@
 						<h3>Professional Skills</h3>
 						{% for item in skill_objects %}
 							{% if item.category == 'Professional Skills' %}
-							<div class="progress">
-								<div class="p-title">{{ item.title }}</div>
-								<div class="progress-bar wow fadeInLeft" data-progress="{{ item.count }}%" style="width: {{ item.count }}%;" data-wow-duration="1.5s" data-wow-delay=".8s">
-								<span class="pull-right">{{ item.count }}%</span>
-							    </div>
-							</div>	
+								<div class="progress">
+									<div class="p-title">{{ item.title }}</div>
+									<div class="progress-bar wow fadeInLeft" data-progress="{{ item.count }}%" style="width: {{ item.count }}%;" data-wow-duration="1.5s" data-wow-delay=".8s">
+									<span class="pull-right">{{ item.count }}%</span>
+								    </div>
+								</div>
+							{% endif %}
 						{% endfor %}					
 					</div>
 					<!-- professonal-skill start -->
@@ -34,12 +35,13 @@
 						<!-- Illustrator progress start -->
 						{% for item in skill_objects %}
 							{% if item.category == 'Software Skills' %}
-							<div class="progress">
-								<div class="p-title">{{ item.title }}</div>
-								<div class="progress-bar wow fadeInRight" data-progress="{{ item.count }}%" style="width: {{ item.count }}%;" data-wow-duration="1.5s" data-wow-delay=".8s">
-								<span class="pull-right">{{ item.count }}%</span>
-							    </div>
-							</div>	
+								<div class="progress">
+									<div class="p-title">{{ item.title }}</div>
+									<div class="progress-bar wow fadeInRight" data-progress="{{ item.count }}%" style="width: {{ item.count }}%;" data-wow-duration="1.5s" data-wow-delay=".8s">
+									<span class="pull-right">{{ item.count }}%</span>
+								    </div>
+								</div>
+							{% endif %}	
 						{% endfor %}
 					</div>
 					<!-- professonal-skill end -->
@@ -51,12 +53,13 @@
 						<!-- Communication progressbar start -->
 						{% for item in skill_objects %}
 							{% if item.category == 'Additional Skills' %}
-							<div class="progressbar" data-animate="false">
-								<div class="circle" data-percent="{{ item.count }}">
-								<div></div>
-							</div>
-							<h4>{{ item.title }}</h4>
-							</div>
+								<div class="progressbar" data-animate="false">
+									<div class="circle" data-percent="{{ item.count }}">
+									<div></div>
+								</div>
+								<h4>{{ item.title }}</h4>
+								</div>
+							{% endif %}
 						{% endfor %}
 				    </div>
 				    <!-- addotional-skills end-->
@@ -67,12 +70,13 @@
 						<h3 class="text-uppercase">Language Skills</h3>
 						{% for item in skill_objects %}
 							{% if item.category == 'Language Skills' %}
-							<div class="progressbar" data-animate="false">
-								<div class="circle" data-percent="{{ item.count }}">
-								<div></div>
-							</div>
-							<h4>{{ item.title }}</h4>
-							</div>
+								<div class="progressbar" data-animate="false">
+									<div class="circle" data-percent="{{ item.count }}">
+									<div></div>
+								</div>
+								<h4>{{ item.title }}</h4>
+								</div>
+							{% endif %}
 						{% endfor %}
 				    </div>
 				    <!-- addotional-skills -->

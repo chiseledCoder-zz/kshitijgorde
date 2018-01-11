@@ -42,15 +42,15 @@ class MyDistinguishingPoint(models.Model):
 	def __str__(self):
 		return self.title
 
-StatCategories = (
+SkillCategories = (
 		("Professional Skills", "Professional Skills"),
 		("Software Skills", "Software Skills"),
 		("Additional Skills", "Additional Skills"),
 		("Language Skills", "Language Skills"),
 	)
 
-class Stat(models.Model):
-	category = models.CharField(max_length=100, choices=StatCategories, default="Professional Skills")
+class Skill(models.Model):
+	category = models.CharField(max_length=100, choices=SkillCategories, default="Professional Skills")
 	title = models.CharField(max_length=250)
 	count = models.IntegerField()
 	enable = models.BooleanField(default=False)

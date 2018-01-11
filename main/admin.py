@@ -7,7 +7,7 @@ from .models import *
 class MyDistinguishingPointAdmin(admin.ModelAdmin):
 	list_display = ("title", "enable")
 
-class StatAdmin(admin.ModelAdmin):
+class SkillAdmin(admin.ModelAdmin):
 	list_display = ("title", "count","category", "enable")
 
 class TestimonialAdmin(admin.ModelAdmin):
@@ -15,5 +15,5 @@ class TestimonialAdmin(admin.ModelAdmin):
 
 admin.site.register(AboutMe)
 admin.site.register(MyDistinguishingPoint, MyDistinguishingPointAdmin)
-admin.site.register(Stat, StatAdmin)
+admin.site.register(Skill, SkillAdmin)
 admin.site.register(Testimonial, TestimonialAdmin)

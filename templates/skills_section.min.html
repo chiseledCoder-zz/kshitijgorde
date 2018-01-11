@@ -18,7 +18,14 @@
 <span class="pull-right">85%</span>
 </div>
 </div>
-{% for item in stat%}
+{% for item in skill_objects.category == 'Professional Skills' %}
+<div class="progress">
+<div class="p-title">HTML</div>
+<div class="progress-bar wow fadeInLeft" data-progress="85%" style="width:85%" data-wow-duration="1.5s" data-wow-delay=".8s">
+<span class="pull-right">85%</span>
+</div>
+</div>
+{% endfor %}
 </div>
 </div>
 <div class="col-md-5">

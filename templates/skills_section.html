@@ -70,11 +70,11 @@
 						<h3 class="text-uppercase">Language Skills</h3>
 						{% for item in skill_objects %}
 							{% if item.category == 'Language Skills' %}
-								<div class="progressbar" data-animate="false">
+								<div class="progressbar language" data-animate="false">
 									<div class="circle" data-percent="{{ item.count }}">
-									<div></div>
-								</div>
-								<h4>{{ item.title }}</h4>
+										<div></div>
+									</div>
+									<h4>{{ item.title}}</h4>
 								</div>
 							{% endif %}
 						{% endfor %}

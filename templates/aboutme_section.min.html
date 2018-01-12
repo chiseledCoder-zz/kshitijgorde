@@ -18,8 +18,10 @@
 </div>
 <div class="col-md-8 text-center">
 <div class="about-me-info">
-<h2>Stevin Smith</h2>
-<p>Frontend Developer</p>
+{% for item in aboutme_objects %}
+<h2>{{ item.full_name }}</h2>
+<p>{{ item.job_position}}</p>
+{% endfor %}
 </div>
 </div>
 </div>

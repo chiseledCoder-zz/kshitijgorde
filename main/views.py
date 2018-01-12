@@ -12,6 +12,8 @@ def home(request):
 	skills = Skill.objects.filter(enable=True)[:3]
 	project_list = Project.objects.filter(enable=True)
 	testimonial_list = Testimonial.objects.filter(enable=True)
+	education_list = Education.objects.all().order_by('-last_year')
+	experience_list = WorkExperience.objects.all().order_by('-last_year')
 	post_list = Post.objects.active()[:5]
 	template = "index.html"
 	context = {
@@ -21,6 +23,8 @@ def home(request):
 		"skill_objects": skills,
 		"project_objects": project_list,
 		"testimonial_objects": testimonial_list,
+		"education_objects": education_list,
+		"experience_objects": experience_list,
 		"blog_objects": post_list,
 	}
 	return render(request, template, context)

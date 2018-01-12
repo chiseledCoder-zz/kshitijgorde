@@ -13,6 +13,7 @@
 			<!-- section-divide-line start -->
 			<div class="section-divide-line">
 				<div class="row">
+					{% for item in %}
 					<div class="col-sm-6">
 						<!-- rounded-shape start -->
 						<div class="rounded-shape wow bounceIn animated">
@@ -42,66 +43,7 @@
 						</div><!-- experience-time end-->
 					</div>
 				</div>
-				<div class="row left">
-					<div class="col-sm-6">
-						<!-- rounded-shape start -->
-						<div class="rounded-shape wow bounceIn">
-						</div>
-						<!-- rounded-shape end -->
-						<!-- experience-time start -->
-						<div class="experience-time line-shape wow slideInLeft animated">
-							<h4>July 2014 - May 2016</h4>
-						</div><!-- experience-time -->
-					</div>
-					<div class="col-sm-6">
-						<!-- experience-details start -->
-						<div class="panel-group experience-details" id="experience2">
-							<div class="panel panel-default wow slideInRight">
-								<div class="panel-heading info-line-shape">
-									<a href="#experince-2" data-parent="#experience2" data-toggle="collapse">
-									<h3>Wordpress Developer <span>CoderTheme</span></h3>
-									</a>
-								</div>
-								<div id="experince-2" class="panel-collapse collapse">
-									<div class="panel-body">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae blanditiis, nesciunt adipisci consectetur facilis sint explicabo excepturi. Error qui ratione perferendis, quaerat incidunt? Delectus doloribus reiciendis, sequi deserunt. Veritatis eveniet consectetur facere commodi molestiae neque, error officiis quos, expedita reprehenderit tempore rerum et alias numquam sequi, reiciendis soluta necessitatibus harum!
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- experience-details end -->
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6">
-						<!-- rounded-shape start -->
-						<div class="rounded-shape wow bounceIn"></div>
-						<!-- rounded-shape end -->
-						<!-- experience-details start -->
-						<div class="panel-group experience-details last" id="experience3">
-							<div class="panel panel-default wow slideInLeft">
-								<div class="panel-heading info-line-shape">
-									<a href="#experince-3" data-parent="#experience3" data-toggle="collapse">
-									<h3>UI/UX Designer <span>ProperTheme</span></h3>
-									</a>
-								</div>
-								<div id="experince-3" class="panel-collapse collapse">
-									<div class="panel-body">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae blanditiis, nesciunt adipisci consectetur facilis sint explicabo excepturi. Error qui ratione perferendis, quaerat incidunt? Delectus doloribus reiciendis, sequi deserunt. Veritatis eveniet consectetur facere commodi molestiae neque, error officiis quos, expedita reprehenderit tempore rerum et alias numquam sequi, reiciendis soluta necessitatibus harum!
-									</div>
-								</div>
-							</div>
-						</div>
-						<!-- experience-details end -->
-					</div>
-					<div class="col-sm-6">
-						<!-- experience-time start -->
-						<div class="experience-time line-shape wow slideInRight">
-							<h4>July 2012 - Feb 2014</h4>
-						</div>
-						<!-- experience-time end -->
-					</div>
-				</div>
+				{% endfor %}
 			</div>
 			<!-- section-divide-line end -->
 		</div>

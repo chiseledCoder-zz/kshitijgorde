@@ -21,7 +21,7 @@ class ProjectCategory(models.Model):
 			ping_google()
 		except Exception:
 			pass
-		super(Project, self).save(*args, **kwargs)
+		super(ProjectCategory, self).save(*args, **kwargs)
 
 class Project(models.Model):
 	title = models.CharField(max_length=250)

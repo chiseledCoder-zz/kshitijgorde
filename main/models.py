@@ -77,3 +77,26 @@ class Testimonial(models.Model):
 
 	def __str__(self):
 		return self.given_by_name
+
+
+class Education(models.Model):
+	school_name = models.CharField(max_length=100)
+	degree = models.CharField(max_length=100)
+	school_location = models.CharField(max_length=100)
+	year_to_year = models.CharField(max_length=50)
+	last_year = models.DateField('Date')
+	currently_studying = models.BooleanField(default=False)
+
+	def __unicode__(self):
+		return self.school_name
+
+class WorkExperience(models.Model):
+	employer = models.CharField(max_length=100)
+	designation = models.CharField(max_length=100)
+	description = models.TextField()
+	company_location = models.CharField(max_length=100)
+	year_to_year = models.CharField(max_length=50)
+	last_year = models.DateField('Date')
+	currently_working = models.BooleanField(default=False)
+	def __unicode__(self):
+		return self.employer

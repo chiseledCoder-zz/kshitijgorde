@@ -13,7 +13,18 @@ class SkillAdmin(admin.ModelAdmin):
 class TestimonialAdmin(admin.ModelAdmin):
 	list_display = ("given_by_name", "designation", "enable")
 
+class EducationAdmin(admin.ModelAdmin):
+	list_display = ("school_name", "degree", "currently_studying")
+
+
+class WorkExperienceAdmin(admin.ModelAdmin):
+	list_display = ("employer", "designation", "currently_working")
+
+
+
 admin.site.register(AboutMe)
 admin.site.register(MyDistinguishingPoint, MyDistinguishingPointAdmin)
 admin.site.register(Skill, SkillAdmin)
 admin.site.register(Testimonial, TestimonialAdmin)
+admin.site.register(Education, EducationAdmin)
+admin.site.register(WorkExperience, WorkExperienceAdmin)

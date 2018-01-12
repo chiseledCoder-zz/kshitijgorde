@@ -12,7 +12,7 @@
 <div class="col-md-7">
 <div class="professonal-skill text-uppercase m-top-20">
 <h3>Professional Skills</h3>
-{% for item in skill_objects %} {% if item.category == 'Professional Skills' %}
+{% for item in skill_objects %} {% if item.category == "Professional Skills" %}
 <div class="progress">
 <div class="p-title">{{ item.title }}</div>
 <div class="progress-bar wow fadeInLeft" data-progress="{{ item.count }}%" style="width:{};" data-wow-duration="1.5s" data-wow-delay=".8s">
@@ -25,7 +25,7 @@
 <div class="col-md-5">
 <div class="professonal-skill text-uppercase m-top-50 m-top-30">
 <h3>Software Skills</h3>
-{% for item in skill_objects %} {% if item.category == 'Software Skills' %}
+{% for item in skill_objects %} {% if item.category == "Software Skills" %}
 <div class="progress">
 <div class="p-title">{{ item.title }}</div>
 <div class="progress-bar wow fadeInRight" data-progress="{{ item.count }}%" style="width:{};" data-wow-duration="1.5s" data-wow-delay=".8s">
@@ -38,7 +38,7 @@
 <div class="col-md-7">
 <div class="addotional-skills m-top-50">
 <h3 class="text-uppercase">Additional Skills</h3>
-{% for item in skill_objects %} {% if item.category == 'Additional Skills' %}
+{% for item in skill_objects %} {% if item.category == "Additional Skills" %}
 <div class="progressbar" data-animate="false">
 <div class="circle" data-percent="{{ item.count }}">
 <div></div>

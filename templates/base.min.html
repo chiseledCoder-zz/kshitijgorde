@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="img/favicon.png" type="image/png">
 {% block extracss %} {% include "all_css.min.html" %} {% endblock %}
-<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+<script src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
 </head>
 <body>
 <div class="about-me-preloder">

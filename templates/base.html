@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +15,7 @@
 		{% include "all_css.min.html" %}
 	{% endblock %}
 	<!-- modernizr js -->
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
 </head>
 <body>
 	<!-- preloder Start -->

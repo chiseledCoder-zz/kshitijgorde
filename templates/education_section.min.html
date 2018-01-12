@@ -9,26 +9,25 @@
 </div>
 </div>
 <div class="section-divide-line">
-{% for item in education_list %}
+{% for item in education_objects %}
 <div class="row">
 <div class="col-sm-6">
 <div class="rounded-shape wow bounceIn">
 </div>
 <div class="single-education-item info-line-shape top-20 wow slideInLeft">
 <div class="grade-wrap">
-<h5>Grade A+</h5>
+<h5>{{ item.gpa_grade }}</h5>
 </div>
 <div class="eucation-info">
-<h4>{{ item.school_name }}</h4>
-<h5>{{ item.degree }}</h5>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quam, voluptas nemo adipisci dolorem.dolor sit amet, consectetur adipisicing elit. Necessitatibus quam, voluptas nemo adipisci dolorem.</p>
+<h4>{{ item.degree }}</h4>
+<h5>{{ item.school_name }}</h5>
+<p>{{ item.description|safe }}</p>
 </div>
 </div>
 </div>
 <div class="col-sm-6">
 <div class="edu-ses-item line-shape text-right wow slideInRight">
-<h4>Duration <span>(4 years)</span></h4>
-<h5>2013-2017</h5>
+<h4>{{ item.year_to_year }}</h4>
 </div>
 </div>
 </div>

@@ -83,6 +83,8 @@ class Testimonial(models.Model):
 class Education(models.Model):
 	school_name = models.CharField(max_length=100)
 	degree = models.CharField(max_length=100)
+	gpa_grade = models.CharField(max_length=50, default="")
+	description = RichTextField(null=True, blank=True)
 	school_location = models.CharField(max_length=100)
 	year_to_year = models.CharField(max_length=50)
 	last_year = models.DateField('Date')
@@ -95,7 +97,7 @@ class Education(models.Model):
 class WorkExperience(models.Model):
 	employer = models.CharField(max_length=100)
 	designation = models.CharField(max_length=100)
-	description = models.TextField()
+	description = RichTextField(null=True, blank=True)
 	company_location = models.CharField(max_length=100)
 	year_to_year = models.CharField(max_length=50)
 	last_year = models.DateField('Date')

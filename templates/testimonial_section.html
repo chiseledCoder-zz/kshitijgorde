@@ -21,7 +21,7 @@
 								<img src="img/testimonial/thumb-1.jpg" alt="">
 							</div>
 							<h4>{{ item.given_by_name }} <span>{{ item.designation }}</span></h4>
-							<p>{{ item.testimony }}</p>
+							{{ item.testimony|safe }}
 						</div>
 						<!-- single-testimonial-item -->
 					</div>

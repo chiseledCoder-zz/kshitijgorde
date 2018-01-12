@@ -66,8 +66,8 @@ class Skill(models.Model):
 
 class Testimonial(models.Model):
 	given_by_name = models.CharField(max_length=250)
-	testimony = models.TextField()
-	designation = RichTextField(max_length=250)
+	testimony = RichTextField()
+	designation = models.CharField(max_length=250)
 	enable = models.BooleanField(default=False)
 	timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
 	updated = models.DateTimeField(auto_now_add=False, auto_now=True)
@@ -86,7 +86,7 @@ class Education(models.Model):
 	year_to_year = models.CharField(max_length=50)
 	last_year = models.DateField('Date')
 	currently_studying = models.BooleanField(default=False)
-	
+
 
 	def __unicode__(self):
 		return self.school_name

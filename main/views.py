@@ -9,7 +9,7 @@ from blog.models import Post
 def home(request):
 	aboutme = AboutMe.objects.all()[:1]
 	distinguishing_points = MyDistinguishingPoint.objects.filter(enable=True)[:3]
-	skills = Skill.objects.filter(enable=True)[:3]
+	skills_list = Skill.objects.filter(enable=True)
 	project_list = Project.objects.filter(enable=True)
 	testimonial_list = Testimonial.objects.filter(enable=True)
 	education_list = Education.objects.all().order_by('-last_year')
@@ -20,7 +20,7 @@ def home(request):
 		"site_title": "Kshitij Gorde Website",
 		"aboutme_objects": aboutme,
 		"distinguishing_points_objects": distinguishing_points,
-		"skill_objects": skills,
+		"skill_objects": skills_list,
 		"project_objects": project_list,
 		"testimonial_objects": testimonial_list,
 		"education_objects": education_list,

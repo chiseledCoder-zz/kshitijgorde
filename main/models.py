@@ -69,6 +69,7 @@ class Testimonial(models.Model):
 	testimony = RichTextField()
 	designation = models.CharField(max_length=250)
 	enable = models.BooleanField(default=False)
+	image = models.ImageField(default="testimonial/default.png", upload_to='testimonial/')
 	timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
 	updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 

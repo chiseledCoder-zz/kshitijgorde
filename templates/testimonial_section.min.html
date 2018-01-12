@@ -10,29 +10,14 @@
 </div>
 <div class="row">
 <div class="col-md-8 col-md-offset-2">
+{% for item in testimonial_objects %}
 <div class="active-testimonial-carousel owl-theme owl-carousel">
 <div class="single-testimonial-item text-center">
-<div class="testimonial-thumb">
-<img src="img/testimonial/thumb-1.jpg" alt="">
-</div>
-<h4>Marry Chang <span>Web Developer</span></h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde nobis maiores quidem, minus. Voluptatum et corrupti iste suscipit distinctio mollitia necessitatibus cumque. Id maiores atque porro ratione numquam quasi rerum perferendis veritatis aliquam sunt commodi deleniti quos tempora, dolorum, facilis.</p>
-</div>
-<div class="single-testimonial-item text-center">
-<div class="testimonial-thumb">
-<img src="img/testimonial/thumb-2.jpg" alt="">
-</div>
-<h4>Chang Bang<span>Ui/Ux Designer</span></h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde nobis maiores quidem, minus. Voluptatum et corrupti iste suscipit distinctio mollitia necessitatibus cumque. Id maiores atque porro ratione numquam quasi rerum perferendis veritatis aliquam sunt commodi deleniti quos tempora, dolorum, facilis.</p>
-</div>
-<div class="single-testimonial-item text-center">
-<div class="testimonial-thumb">
-<img src="img/testimonial/thumb-3.jpg" alt="">
-</div>
-<h4>Marry Chua <span>Frontend Developer</span></h4>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde nobis maiores quidem, minus. Voluptatum et corrupti iste suscipit distinctio mollitia necessitatibus cumque. Id maiores atque porro ratione numquam quasi rerum perferendis veritatis aliquam sunt commodi deleniti quos tempora, dolorum, facilis.</p>
+<h4>{{ item.given_by_name }} <span>{{ item.designation }}</span></h4>
+<p>{{ item.testimony }}</p>
 </div>
 </div>
+{% endfor %}
 </div>
 </div>
 </div>

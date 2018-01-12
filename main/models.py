@@ -86,6 +86,7 @@ class Education(models.Model):
 	year_to_year = models.CharField(max_length=50)
 	last_year = models.DateField('Date')
 	currently_studying = models.BooleanField(default=False)
+	
 
 	def __unicode__(self):
 		return self.school_name

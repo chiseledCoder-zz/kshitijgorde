@@ -24,12 +24,12 @@
 							<div class="panel panel-default wow slideInLeft animated">
 								<div class="panel-heading info-line-shape">
 									<a href="#experince-1" data-parent="#experience" data-toggle="collapse">
-									<h3>Frontend Developer <span>ProperTheme</span></h3>
+									<h3>{{ item.designation }}<span> {{ item.employer }}</span></h3>
 									</a>
 								</div>
 								<div id="experince-1" class="panel-collapse collapse in">
 									<div class="panel-body">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae blanditiis, nesciunt adipisci consectetur facilis sint explicabo excepturi. Error qui ratione perferendis, quaerat incidunt? Delectus doloribus reiciendis, sequi deserunt. Veritatis eveniet consectetur facere commodi molestiae neque, error officiis quos, expedita reprehenderit tempore rerum et alias numquam sequi, reiciendis soluta necessitatibus harum!
+										{{ item.description }}
 									</div>
 								</div>
 							</div>
@@ -39,7 +39,9 @@
 					<div class="col-sm-6">
 						<!-- experience-time start-->
 						<div class="experience-time line-shape wow slideInRight">
-							<h4 >July 2017 - Still Now</h4>
+							<h4>
+							{% if item.currently_working %}<i>{{ item.year_to_year }}</i>
+							{% else %}{{ item.year_to_year }}{% endif %}</h4>
 						</div><!-- experience-time end-->
 					</div>
 				</div>

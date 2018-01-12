@@ -39,7 +39,7 @@
 									<div class="p-title">{{ item.title }}</div>
 									<div class="progress-bar wow fadeInRight" data-progress="{{ item.count }}%" data-wow-duration="1.5s" data-wow-delay=".8s" id="progressbar{{ item.title|slugify }}">
 										<script type="text/javascript">
-											document.ready(function() {
+											$(document).ready(function() {
 												$("#progressBar{{ item.title|slugify }}").css("width","{{ item.count }}%");
 											});
 										</script>

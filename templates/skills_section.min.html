@@ -15,7 +15,8 @@
 {% for item in skill_objects %} {% if item.category == "Professional Skills" %}
 <div class="progress">
 <div class="p-title">{{ item.title }}</div>
-<div class="progress-bar wow fadeInLeft" data-progress="{{ item.count }}%" style="width:{};" data-wow-duration="1.5s" data-wow-delay=".8s">
+<div class="progress-bar wow fadeInLeft" data-progress="{{ item.count }}%" data-wow-duration="1.5s" data-wow-delay=".8s" id="progressBar-{{ item.title|slugify }}">
+<script>$(document).ready(function(){$("#progressBar-{{ item.title|slugify }}").css("width","{{ item.count }}%")})</script>
 <span class="pull-right">{{ item.count }}%</span>
 </div>
 </div>
@@ -28,8 +29,8 @@
 {% for item in skill_objects %} {% if item.category == "Software Skills" %}
 <div class="progress">
 <div class="p-title">{{ item.title }}</div>
-<div class="progress-bar wow fadeInRight" data-progress="{{ item.count }}%" data-wow-duration="1.5s" data-wow-delay=".8s" id="progressbar{{ item.title|slugify }}">
-<script>$(document).ready(function(){$("#progressBar{{ item.title|slugify }}").css("width","{{ item.count }}% !important")})</script>
+<div class="progress-bar wow fadeInRight" data-progress="{{ item.count }}%" data-wow-duration="1.5s" data-wow-delay=".8s" id="progressBar-{{ item.title|slugify }}">
+<script>$(document).ready(function(){$("#progressBar-{{ item.title|slugify }}").css("width","{{ item.count }}%")})</script>
 <span class="pull-right">{{ item.count }}%</span>
 </div>
 </div>

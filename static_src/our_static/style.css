@@ -1027,14 +1027,14 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
     position: absolute;
     top: -20px;
     left: 10px;
-    content: url(img/testimonial/left-quotation.png);
+    /*content: url(img/testimonial/left-quotation.png);*/
     background-repeat: no-repeat;
 }
 .single-testimonial-item p:after {
     position: absolute;
     bottom: -30px;
     right: 10px;
-    content: url(img/testimonial/right-quotation.png);
+    /*content: url(img/testimonial/right-quotation.png);*/
     background-repeat: no-repeat;
 }
 

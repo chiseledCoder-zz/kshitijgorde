@@ -186,17 +186,17 @@
         /*===================
             google map js
         =======================*/
+        var center = [35.315404, -80.743832];
         $('.map')
           .gmap3({
-            center:[40.740, -74.18],
-            zoom: 12,
+            center:center,
+            zoom: 15,
             scrollwheel: false,
           })
-          .groundoverlay(
-            "http://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg",
-            {north: 40.773941, south: 40.712216, east: -74.12544, west: -74.22655},
-          );  
-
+          .marker({
+            position:center,
+            icon: "https://s3.amazonaws.com/resume-collection/map-marker.png"
+          });
         /*===================
             scrollUp js
         =======================*/

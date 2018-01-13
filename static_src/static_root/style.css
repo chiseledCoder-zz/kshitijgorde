@@ -34,8 +34,8 @@
 /*==============================
     01. Google Fonts
 ===============================*/
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
-
+/*@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+*/
 /*==============================
     02. Default Css
 ===============================*/
@@ -1028,14 +1028,14 @@ input[type="text"], input[type="email"], input[type="tel"], input[type="submit"]
     position: absolute;
     top: -20px;
     left: 10px;
-    /*content: url(img/testimonial/left-quotation.png);*/
+    content: url(img/testimonial/left-quotation.png);
     background-repeat: no-repeat;
 }
 .single-testimonial-item p:after {
     position: absolute;
     bottom: -30px;
     right: 10px;
-    /*content: url(img/testimonial/right-quotation.png);*/
+    content: url(img/testimonial/right-quotation.png);
     background-repeat: no-repeat;
 }
 

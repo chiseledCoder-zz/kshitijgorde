@@ -40,17 +40,23 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',
-    'blog',
-    'project',
+
 
     #3rd Party apps
     'ckeditor',
+    'storages',
+    'corsheaders',
+
+    #local apps
+    'main',
+    'blog',
+    'project',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -141,7 +147,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/New_York'
 
 USE_I18N = True
 
@@ -245,3 +251,6 @@ EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD','')
 EMAIL_PORT = 80
 
 CORS_ORIGIN_ALLOW_ALL = True
+
+
+

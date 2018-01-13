@@ -31,7 +31,7 @@
 <div class="row">
 <div class="col-md-4">
 <div class="about-me">
-<h4>About Me</h4>
+<h4>Little more About Me</h4>
 {% for item in aboutme_objects %} {{ item.description|safe }} {% endfor %}
 <a href="https://s3.amazonaws.com/resume-collection/Kshitij+Gorde+Resume.pdf" class="resume-btn" target="_blank">download resume</a>
 </div>
@@ -42,11 +42,9 @@
 {% for item in aboutme_objects %}
 <li><strong>Full Name :</strong>{{ item.full_name }}</li>
 <li><strong>Age :</strong>{{ item.age }}</li>
-<li><strong>Phone :</strong>{{ item.phone }}</li>
+<li><strong>Phone :</strong>{{ item.phone_number }}</li>
 <li><strong>Address :</strong>{{ item.address }}</li>
 <li><strong>Email :</strong>{{ item.email }}</li>
-<li><strong>Skype :</strong>{{ item.skype_id }}</li>
-<li><strong>Job :</strong>{{ item.job_position }}</li>
 {% endfor %}
 </ul>
 </div>

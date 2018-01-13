@@ -27,7 +27,7 @@ class Project(models.Model):
 	title = models.CharField(max_length=250)
 	description = RichTextField()
 	category = models.ForeignKey('ProjectCategory', blank=True, null=True)
-	featured_image = models.ImageField(upload_to='projects/images/', default="projects/images/default.jpg")
+	featured_image = models.ImageField(upload_to='projects/images/featured_image/', default="projects/images/default.jpg")
 	associated_images = models.ManyToManyField('ProjectImage', blank=True)
 	date = models.DateField('Date')
 	project_url = models.CharField(max_length=255, default="")
@@ -54,6 +54,6 @@ class Project(models.Model):
 		return reverse('main:project_detail', kwargs={"project_slug": self.slug})
 
 class ProjectImage(models.Model):
-	image = models.ImageField(upload_to='projects/images/', default="projects/images/default.jpg")
+	image = models.ImageField(upload_to='projects/images/associated_images', default="projects/images/default.jpg")
 	def __unicode__(self):
 		return self.image.file.name

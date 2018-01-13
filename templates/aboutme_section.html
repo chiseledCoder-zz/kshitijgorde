@@ -18,7 +18,6 @@
 						<div class="col-md-4 text-center">
 							<!-- about-me-img start -->
 							<div class="about-me-img">
-								
 								{% for item in aboutme_objects %}
 									<img src="{{ item.display_pic.url }}" alt="my-image">
 								{% endfor %}
@@ -60,7 +59,8 @@
 									<li><strong>Age :</strong>{{ item.age }}</li>
 									<li><strong>Phone :</strong>{{ item.phone_number }}</li>
 									<li><strong>Address :</strong>{{ item.address }}</li>
-									<li><strong>Email :</strong>{{ item.email }}</li>	
+									<li><strong>Email :</strong>{{ item.email }}</li>
+									<li><strong>Available to Relocate in the US</strong></li>	
 								{% endfor %}
 							</ul>
 						</div>

@@ -30,6 +30,7 @@ class Project(models.Model):
 	featured_image = models.ImageField(upload_to='projects/images/', default="projects/images/default.jpg")
 	associated_images = models.ManyToManyField('ProjectImage', blank=True)
 	date = models.DateField('Date')
+	project_url = models.CharField(max_length=255, default="")
 	ongoing = models.BooleanField(default=False)
 	enable = models.BooleanField(default=False)
 	updated = models.DateTimeField(auto_now_add=False, auto_now=True)

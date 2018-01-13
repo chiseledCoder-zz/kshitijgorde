@@ -21,7 +21,7 @@
 <div class="col-md-3 col-sm-6 grid-item {{ item.category }}">
 <div class="single-portfolio-item">
 <div class="portfolio-img">
-<a href="{{ item.featured_image.url }}" title="{{ item|title }}" class="portfolio-lightbox">
+<a href="{% if item.project_url is not None %}{{ item.project_url }}{% else %} {{ item.featured_image.url }}{% endif %}" title="{{ item|title }}" class="portfolio-lightbox">
 <img src="{{ item.featured_image.url }}" alt="{{ item.slug }}">
 <div class="portfolio-icon">
 <i class="icofont icofont-plus"></i>

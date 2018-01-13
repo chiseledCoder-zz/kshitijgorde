@@ -14,7 +14,8 @@ import os
 import sys
 import urlparse
 import dj_database_url
-
+import boto3
+import datetime
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -253,4 +254,50 @@ EMAIL_PORT = 80
 CORS_ORIGIN_ALLOW_ALL = True
 
 
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+AWS_S3_REGION_NAME = 'ap-south-1'
+
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+
+AWS_QUERYSTRING_EXPIRE = 200
+
+AWS_PRELOAD_METADATA = True
+
+AWS_QUERYSTRING_AUTH = False
+
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+
+AWS_IS_GZIPPED = True
+
+GZIP_CONTENT_TYPES = (
+    "text/css","text/javascript",
+    "application/javascript",
+    "application/x-javascript",
+    "image/svg+xml",
+    "image/png",
+    "image/jpg", 
+    "image/jpeg",
+    )
+
+AWS_STORAGE_BUCKET_NAME = 'kshitijgorde-assets'
+
+S3_URL = 'https://%s.s3.amazonaws.com/' %AWS_STORAGE_BUCKET_NAME
+
+STATIC_DIRECTORY = '/static/'
+
+MEDIA_DIRECTORY = '/media/'
+
+STATIC_URL = S3_URL + STATIC_DIRECTORY
+
+MEDIA_URL = S3_URL + MEDIA_DIRECTORY
+
+ADMIN_MEDIA_PREFIX = S3_URL + STATIC_DIRECTORY + 'admin/'
 

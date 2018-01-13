@@ -18,7 +18,10 @@
 						<div class="col-md-4 text-center">
 							<!-- about-me-img start -->
 							<div class="about-me-img">
-								<img src="img/about/about-me.jpg" alt="">
+								
+								{% for item in aboutme_objects %}
+									<img src="{{ item.display_pic.url }}" alt="my-image">
+								{% endfor %}
 							</div>
 							<!-- about-me-img end -->
 						</div>
@@ -44,7 +47,7 @@
 							{% for item in aboutme_objects %}
 								{{ item.description|safe }}
 							{% endfor %}
-							<a href="#" class="resume-btn">download resume</a>
+							<a href="https://s3.amazonaws.com/resume-collection/Kshitij+Gorde+Resume.pdf" class="resume-btn" target="_blank">download resume</a>
 						</div>
 						<!-- about-me end -->
 					</div>

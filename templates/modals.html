@@ -1,0 +1,28 @@
+{% if project_objects %}
+{% for item in project_objects %}
+  <div class="modal fade" id="projectModal{{ item.id }}" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+        <h2 class="modal-title text-center" id="projectModalLabel">{{ item.title|title }}</h2>
+      </div>
+      <div class="modal-body">
+          <div class="owl-carousel owl-theme owl-loaded" id="project-image-carousel{{ obejct.id }}">
+            {% for item in item.associated_images.all %}
+              <div>
+                <img src="{{ item.image.url }}" >
+              </div>
+            {% endfor %}
+          </div>
+          <div class="project-description">
+            {{ item.description|safe }}
+          </div>          
+      </div>
+    </div>
+  </div>
+  </div>
+
+{% endfor %}
+
+{% endif %}

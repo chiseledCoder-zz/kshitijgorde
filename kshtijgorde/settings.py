@@ -277,16 +277,6 @@ AWS_S3_OBJECT_PARAMETERS = {
 
 AWS_IS_GZIPPED = True
 
-GZIP_CONTENT_TYPES = (
-    "text/css","text/javascript",
-    "application/javascript",
-    "application/x-javascript",
-    "image/svg+xml",
-    "image/png",
-    "image/jpg", 
-    "image/jpeg",
-    )
-
 AWS_STORAGE_BUCKET_NAME = 'kshitijgorde-assets'
 
 S3_URL = 'https://%s.s3.amazonaws.com/' %AWS_STORAGE_BUCKET_NAME

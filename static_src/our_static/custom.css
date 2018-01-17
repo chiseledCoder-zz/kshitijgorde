@@ -23,3 +23,7 @@
 .about-me{
     max-height: none;
 }
+.about-personal-info li {
+    width: 48%;
+    line-height: 38px;
+}

@@ -1,0 +1,10 @@
+<div class="owl-carousel owl-theme owl-loaded" id="project-image-carousel{{ project_object.id }}">
+{% for item in project_object.associated_images.all %}
+<div>
+<img src="{{ item.image.url }}">
+</div>
+{% endfor %}
+</div>
+<div class="project-description">
+{{ project_object.description|safe }}
+</div>

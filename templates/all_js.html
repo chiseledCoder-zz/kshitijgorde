@@ -32,3 +32,49 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtF5PUNbKPcGWm8w-JdH1U5gYb0Mkd8lM"></script>
     <!-- manin  js -->
 	<script src="{% static 'js/main.js' %}"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+      		$('a[id^=project-modal-click-]').on("click", function(e) { // catch the form's submit event
+		        e.preventDefault();
+		        var mId = $(this).attr('id');
+		        var projectID = mId.substring(20);
+		        var $modal = $('#project-modal-'+projectID);
+				// Show loader & then get content when modal is shown
+				$modal.modal('show');
+				$modal.addClass('modal-scrollfix')
+						.find('.modal-body')
+						.html('loading...')
+						.load('http://www.kshitijgorde-test.herokuapp.com/project/'+projectID, function() {
+							// Use Bootstrap's built-in function to fix scrolling (to no avail)
+							$modal
+							.removeClass('modal-scrollfix')
+							.modal('handleUpdate');
+							$('#project-image-carousel'+projectID).owlCarousel({
+						    	navigation : true, // Show next and prev buttons
+						    	loop: false,
+							    slideSpeed : 300,
+							    paginationSpeed : 400,
+							    items:1,
+							    lazyLoad: true,
+						    	responsiveClass:true,
+							    responsive:{
+							        0:{
+							            items:1,
+							            nav:true
+							        },
+							        600:{
+							            items:1,
+							            nav:false
+							        },
+							        1000:{
+							            items:1,
+							            nav:true,
+							            loop:false
+							        }
+							    }
+						    });
+					});
+		    });/* end of onclick*/
+
+		});
+	</script>

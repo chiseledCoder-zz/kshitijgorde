@@ -28,3 +28,11 @@ def home(request):
 		"blog_objects": post_list,
 	}
 	return render(request, template, context)
+
+def load_project_modal_data(request, project_id):
+	project = get_object_or_404(Project, id=project_id)
+	template = "load_project_modal_data.html"
+	context = {
+		"project_object": project
+	}
+	return render(request, template, context)

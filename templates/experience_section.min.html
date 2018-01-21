@@ -12,9 +12,9 @@
 {% for item in experience_objects %} {% if item.left == True %}
 <div class="row left">
 <div class="col-sm-6">
-<div class="rounded-shape wow bounceIn animated">
+<div class="rounded-shape wow bounceIn">
 </div>
-<div class="experience-time line-shape wow slideInLeft animated">
+<div class="experience-time line-shape wow slideInLeft">
 <h4>
 {% if item.currently_working %}<i>{{ item.year_to_year }}</i>
 {% else %}{{ item.year_to_year }}{% endif %}</h4>
@@ -22,7 +22,7 @@
 </div>
 <div class="col-sm-6">
 <div class="panel-group experience-details" id="experience">
-<div class="panel panel-default wow slideInRight animated">
+<div class="panel panel-default wow slideInRight">
 <div class="panel-heading info-line-shape">
 <a href="#experince-{{ item.id }}" data-parent="#experience" data-toggle="collapse">
 <h3>{{ item.designation }}<span> {{ item.employer }}</span></h3>
@@ -40,10 +40,10 @@
 {% else %}
 <div class="row">
 <div class="col-sm-6">
-<div class="rounded-shape wow bounceIn animated">
+<div class="rounded-shape wow bounceIn">
 </div>
 <div class="panel-group experience-details" id="experience">
-<div class="panel panel-default wow slideInleft animated">
+<div class="panel panel-default wow slideInleft">
 <div class="panel-heading info-line-shape">
 <a href="#experince-{{ item.id }}" data-parent="#experience" data-toggle="collapse">
 <h3>{{ item.designation }}<span> {{ item.employer }}</span></h3>
@@ -58,7 +58,7 @@
 </div>
 </div>
 <div class="col-sm-6">
-<div class="experience-time line-shape wow slideInRight animated">
+<div class="experience-time line-shape wow slideInRight">
 <h4>
 {% if item.currently_working %}<i>{{ item.year_to_year }}</i>
 {% else %}{{ item.year_to_year }}{% endif %}</h4>

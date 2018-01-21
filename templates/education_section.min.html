@@ -12,13 +12,13 @@
 {% for item in education_objects %} {% if item.left == True %}
 <div class="row left">
 <div class="col-sm-6">
+<div class="rounded-shape wow bounceIn">
+</div>
 <div class="edu-ses-item line-shape text-right wow slideInLeft">
 <h4>{{ item.year_to_year }}</h4>
 </div>
 </div>
 <div class="col-sm-6">
-<div class="rounded-shape wow bounceIn">
-</div>
 <div class="single-education-item info-line-shape top-20 wow slideInRight">
 <div class="grade-wrap">
 <h5>{{ item.gpa_grade }}</h5>

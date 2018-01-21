@@ -12,6 +12,8 @@
 {% for item in experience_objects %} {% if item.left == True %}
 <div class="row left">
 <div class="col-sm-6">
+<div class="rounded-shape wow bounceIn animated">
+</div>
 <div class="experience-time line-shape wow slideInLeft animated">
 <h4>
 {% if item.currently_working %}<i>{{ item.year_to_year }}</i>
@@ -19,8 +21,6 @@
 </div>
 </div>
 <div class="col-sm-6">
-<div class="rounded-shape wow bounceIn animated">
-</div>
 <div class="panel-group experience-details" id="experience">
 <div class="panel panel-default wow slideInRight animated">
 <div class="panel-heading info-line-shape">

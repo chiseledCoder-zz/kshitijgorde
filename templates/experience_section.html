@@ -12,40 +12,74 @@
 			</div>
 			<!-- section-divide-line start -->
 			<div class="section-divide-line">
-					{% for item in experience_objects %}
-				
-				<div class="row {% if item.left == True %}left{% endif %}">
-					<div class="col-sm-6">
-						<!-- rounded-shape start -->
-						<div class="rounded-shape wow bounceIn animated">
-						</div>
-						<!-- rounded-shape start -->
-						<!-- experience-details start -->
-						<div class="panel-group experience-details" id="experience">
-							<div class="panel panel-default wow slideInLeft animated">
-								<div class="panel-heading info-line-shape">
-									<a href="#experince-{{ item.id }}" data-parent="#experience" data-toggle="collapse">
-									<h3>{{ item.designation }}<span> {{ item.employer }}</span></h3>
-									</a>
+				{% for item in experience_objects %}
+					{% if item.left == True %}
+						<div class="row left">
+							<div class="col-sm-6">
+								<!-- experience-time start-->
+								<div class="experience-time line-shape wow slideInLeft animated">
+									<h4>
+									{% if item.currently_working %}<i>{{ item.year_to_year }}</i>
+									{% else %}{{ item.year_to_year }}{% endif %}</h4>
+								</div><!-- experience-time end-->
+							</div>
+							<div class="col-sm-6">
+								<!-- rounded-shape start -->
+								<div class="rounded-shape wow bounceIn animated">
 								</div>
-								<div id="experince-{{ item.id }}" class="panel-collapse collapse in">
-									<div class="panel-body">
-										{{ item.description|safe }}
+								<!-- rounded-shape start -->
+								<!-- experience-details start -->
+								<div class="panel-group experience-details" id="experience">
+									<div class="panel panel-default wow slideInRight animated">
+										<div class="panel-heading info-line-shape">
+											<a href="#experince-{{ item.id }}" data-parent="#experience" data-toggle="collapse">
+											<h3>{{ item.designation }}<span> {{ item.employer }}</span></h3>
+											</a>
+										</div>
+										<div id="experince-{{ item.id }}" class="panel-collapse collapse in">
+											<div class="panel-body">
+												{{ item.description|safe }}
+											</div>
+										</div>
 									</div>
 								</div>
+								<!-- experience-details end -->
 							</div>
 						</div>
-						<!-- experience-details end -->
-					</div>
-					<div class="col-sm-6">
-						<!-- experience-time start-->
-						<div class="experience-time line-shape wow slideInRight">
-							<h4>
-							{% if item.currently_working %}<i>{{ item.year_to_year }}</i>
-							{% else %}{{ item.year_to_year }}{% endif %}</h4>
-						</div><!-- experience-time end-->
-					</div>
-				</div>
+					{% else %}
+						<div class="row">
+							<div class="col-sm-6">
+								<!-- rounded-shape start -->
+								<div class="rounded-shape wow bounceIn animated">
+								</div>
+								<!-- rounded-shape start -->
+								<!-- experience-details start -->
+								<div class="panel-group experience-details" id="experience">
+									<div class="panel panel-default wow slideInleft animated">
+										<div class="panel-heading info-line-shape">
+											<a href="#experince-{{ item.id }}" data-parent="#experience" data-toggle="collapse">
+											<h3>{{ item.designation }}<span> {{ item.employer }}</span></h3>
+											</a>
+										</div>
+										<div id="experince-{{ item.id }}" class="panel-collapse collapse in">
+											<div class="panel-body">
+												{{ item.description|safe }}
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- experience-details end -->
+							</div>
+							<div class="col-sm-6">
+								<!-- experience-time start-->
+								<div class="experience-time line-shape wow slideInRight animated">
+									<h4>
+									{% if item.currently_working %}<i>{{ item.year_to_year }}</i>
+									{% else %}{{ item.year_to_year }}{% endif %}</h4>
+								</div><!-- experience-time end-->
+							</div>
+						</div>
+					{% endif %}
 				{% endfor %}
 			</div>
 			<!-- section-divide-line end -->

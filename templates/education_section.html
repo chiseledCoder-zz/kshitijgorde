@@ -13,33 +13,63 @@
 			<!-- section-divide-line start -->
 			<div class="section-divide-line">
 				{% for item in education_objects %}
-					<div class="row {% if item.left == True %}left{% endif %}">
-						<div class="col-sm-6">
-							<!-- rounded-shape end -->
-							<div class="rounded-shape wow bounceIn">
-							</div>
-							<!-- rounded-shape end -->
-							<!-- single-education-item start -->
-							<div class="single-education-item info-line-shape top-20 wow slideInLeft">
-								<div class="grade-wrap">
-									<h5>{{ item.gpa_grade }}</h5>
+					{% if item.left == True %}
+						<div class="row left">
+							<div class="col-sm-6">
+								<!-- edu-ses-item start -->
+								<div class="edu-ses-item line-shape text-right wow slideInLeft">
+									<h4>{{ item.year_to_year }}</h4>
 								</div>
-								<div class="eucation-info">
-									<h4>{{ item.degree }}</h4>
-									<h5>{{ item.school_name }}</h5>
-									<p>{{ item.description|safe }}</p>
+								<!-- edu-ses-item end -->
+							</div>
+							<div class="col-sm-6">
+								<!-- rounded-shape end -->
+								<div class="rounded-shape wow bounceIn">
 								</div>
+								<!-- rounded-shape end -->
+								<!-- single-education-item start -->
+								<div class="single-education-item info-line-shape top-20 wow slideInRight">
+									<div class="grade-wrap">
+										<h5>{{ item.gpa_grade }}</h5>
+									</div>
+									<div class="eucation-info">
+										<h4>{{ item.degree }}</h4>
+										<h5>{{ item.school_name }}</h5>
+										<p>{{ item.description|safe }}</p>
+									</div>
+								</div>
+								<!-- single-education-item end -->
 							</div>
-							<!-- single-education-item end -->
 						</div>
-						<div class="col-sm-6">
-							<!-- edu-ses-item start -->
-							<div class="edu-ses-item line-shape text-right wow slideInRight">
-								<h4>{{ item.year_to_year }}</h4>
+					{% else %}
+						<div class="row">
+							<div class="col-sm-6">
+								<!-- rounded-shape end -->
+								<div class="rounded-shape wow bounceIn">
+								</div>
+								<!-- rounded-shape end -->
+								<!-- single-education-item start -->
+								<div class="single-education-item info-line-shape top-20 wow slideInLeft">
+									<div class="grade-wrap">
+										<h5>{{ item.gpa_grade }}</h5>
+									</div>
+									<div class="eucation-info">
+										<h4>{{ item.degree }}</h4>
+										<h5>{{ item.school_name }}</h5>
+										<p>{{ item.description|safe }}</p>
+									</div>
+								</div>
+								<!-- single-education-item end -->
 							</div>
-							<!-- edu-ses-item end -->
+							<div class="col-sm-6">
+								<!-- edu-ses-item start -->
+								<div class="edu-ses-item line-shape text-right wow slideInRight">
+									<h4>{{ item.year_to_year }}</h4>
+								</div>
+								<!-- edu-ses-item end -->
+							</div>
 						</div>
-					</div>
+					{% endif %}
 				{% endfor %}
 			</div>
 			<!-- section-divide-line end-->

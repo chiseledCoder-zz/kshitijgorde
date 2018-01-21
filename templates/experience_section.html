@@ -14,7 +14,7 @@
 			<div class="section-divide-line">
 					{% for item in experience_objects %}
 				
-				<div class="row">
+				<div class="row {% if item.left == True %}left{% endif %}">
 					<div class="col-sm-6">
 						<!-- rounded-shape start -->
 						<div class="rounded-shape wow bounceIn animated">

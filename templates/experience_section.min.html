@@ -17,11 +17,11 @@
 <div class="panel-group experience-details" id="experience">
 <div class="panel panel-default wow slideInLeft animated">
 <div class="panel-heading info-line-shape">
-<a href="#experince-1" data-parent="#experience" data-toggle="collapse">
+<a href="#experince-{{ item.id }}" data-parent="#experience" data-toggle="collapse">
 <h3>{{ item.designation }}<span> {{ item.employer }}</span></h3>
 </a>
 </div>
-<div id="experince-1" class="panel-collapse collapse in">
+<div id="experince-{{ item.id }}" class="panel-collapse collapse in">
 <div class="panel-body">
 {{ item.description|safe }}
 </div>

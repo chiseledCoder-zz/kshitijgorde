@@ -14,11 +14,11 @@ class TestimonialAdmin(admin.ModelAdmin):
 	list_display = ("given_by_name", "designation", "enable")
 
 class EducationAdmin(admin.ModelAdmin):
-	list_display = ("school_name", "degree", "currently_studying")
+	list_display = ("school_name", "degree", "currently_studying", "left")
 
 
 class WorkExperienceAdmin(admin.ModelAdmin):
-	list_display = ("employer", "designation", "currently_working")
+	list_display = ("employer", "designation", "currently_working", "left")
 
 
 

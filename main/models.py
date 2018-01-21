@@ -87,6 +87,7 @@ class Education(models.Model):
 	description = RichTextField(null=True, blank=True)
 	school_location = models.CharField(max_length=100)
 	year_to_year = models.CharField(max_length=50)
+	left = models.BooleanField(default=False)
 	last_year = models.DateField('Date')
 	currently_studying = models.BooleanField(default=False)
 
@@ -100,6 +101,7 @@ class WorkExperience(models.Model):
 	description = RichTextField(null=True, blank=True)
 	company_location = models.CharField(max_length=100)
 	year_to_year = models.CharField(max_length=50)
+	left = models.BooleanField(default=False)
 	last_year = models.DateField('Date')
 	currently_working = models.BooleanField(default=False)
 	def __unicode__(self):
